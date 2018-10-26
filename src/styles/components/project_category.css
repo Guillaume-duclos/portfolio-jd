@@ -1,0 +1,20 @@
+.teaser-title {
+  border: 0px solid white;
+  position: absolute;
+  width: auto;
+  transition: .3s; }
+  .teaser-title h2, .teaser-title h3 {
+    color: white;
+    border: 0px solid white;
+    display: block; }
+  .teaser-title h2 {
+    font-size: 3em;
+    border-bottom: 2px solid white;
+    padding-left: 60px;
+    float: left;
+    margin-bottom: 10px; }
+  .teaser-title h3 {
+    padding-left: 60px;
+    text-transform: uppercase;
+    font-weight: normal;
+    letter-spacing: 1px; }

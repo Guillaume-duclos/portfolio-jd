@@ -1,1 +1,3 @@
-Preview here : https://guillaume-duclos.github.io/React-Boilerplate/
+Portfolio of Jeanne Duplessis.
+
+Preview comming soon.

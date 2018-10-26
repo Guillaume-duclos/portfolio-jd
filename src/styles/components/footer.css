@@ -1,4 +1,17 @@
 footer {
-  border: 1px solid white; }
-  footer button {
+  margin-top: 50px;
+  z-index: 2; }
+  footer a {
     border-radius: 50%; }
+    footer a:nth-child(1), footer a:nth-child(3) {
+      width: 15px;
+      height: 15px;
+      background-color: white;
+      margin: auto 50px; }
+    footer a:nth-child(2) {
+      width: 35px;
+      height: 35px;
+      border: 2px solid white;
+      background-color: transparent; }
+      footer a:nth-child(2):hover {
+        border: 3px solid white; }
