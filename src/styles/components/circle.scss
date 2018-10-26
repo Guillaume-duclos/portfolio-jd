@@ -1,0 +1,34 @@
+.circle {
+  width: 40vw;
+  height: 40vw;
+  margin: auto;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation-duration: 1s;
+  animation-name: teaserBackgroundAnimation;
+  border-radius: 50%;
+
+  @media all and (max-width: 1300px) {
+    width: 50vw;
+    height: 50vw;
+  }
+
+  @keyframes teaserBackgroundAnimation {
+    from { background-size: 130%; }
+    to { background-size: 100%; }
+  }
+
+  svg {
+    overflow: visible;
+    width: 100%;
+    height: 100%;
+
+    circle {
+      fill: none;
+      stroke: #FFFFFF;
+      stroke-width: 1.5px;
+    }
+  }
+}

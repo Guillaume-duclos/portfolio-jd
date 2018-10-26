@@ -1,0 +1,14 @@
+.content {
+  border: 0px solid red; }
+
+.projectHeader {
+  border: 1px solid red;
+  margin: 0 auto;
+  position: relative;
+  height: auto;
+  display: table; }
+  .projectHeader img {
+    width: 100%; }
+  .projectHeader .teaser-title {
+    bottom: 60px;
+    right: -40px; }

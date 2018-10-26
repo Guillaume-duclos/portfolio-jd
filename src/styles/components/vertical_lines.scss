@@ -1,0 +1,26 @@
+@import "../configs/colors.scss";
+
+.vertical-lines {
+  width: 100%;
+  min-height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+
+  > div {
+    width: 25%;
+    border-left: 1px solid $whiteTransparency;
+    border-right: 1px solid $whiteTransparency;
+  }
+
+  > div:first-child  {
+    border-left: 0;
+  }
+
+  > div:last-child  {
+    border-right: 0;
+  }
+}

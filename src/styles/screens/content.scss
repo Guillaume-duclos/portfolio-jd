@@ -1,0 +1,22 @@
+@import "../configs/colors.scss";
+
+.content {
+  border: 0px solid red;
+}
+
+.projectHeader {
+  border: 1px solid red;
+  margin: 0 auto;
+  position: relative;
+  height: auto;
+  display: table;
+
+  img {
+    width: 100%;
+  }
+
+  .teaser-title {
+    bottom: 60px;
+    right: -40px;
+  }
+}

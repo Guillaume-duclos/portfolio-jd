@@ -1,0 +1,20 @@
+// Configs
+@import "../configs/colors.scss";
+@import "../configs/common.scss";
+@import "../configs/fonts.scss";
+
+// Screens
+@import "../screens/home.scss";
+@import "../screens/content.scss";
+@import "../screens/contact.scss";
+@import "../screens/404.scss";
+
+// Components
+@import "../components/vertical_lines.scss";
+@import "../components/container.scss";
+@import "../components/logo.scss";
+@import "../components/teaser.scss";
+@import "../components/navbar.scss";
+@import "../components/circle.scss";
+@import "../components/project_category.scss";
+@import "../components/footer.scss";

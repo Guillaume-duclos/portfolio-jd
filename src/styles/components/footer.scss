@@ -1,0 +1,26 @@
+footer {
+  margin-top: 50px;
+  z-index: 2;
+
+  a {
+    border-radius:  50%;
+
+    &:nth-child(1), &:nth-child(3) {
+      width: 15px;
+      height: 15px;
+      background-color: $white;
+      margin: auto 50px;
+    }
+
+    &:nth-child(2) {
+      width: 35px;
+      height: 35px;
+      border: 2px solid $white;
+      background-color: transparent;
+
+      &:hover {
+        border: 3px solid $white;
+      }
+    }
+  }
+}

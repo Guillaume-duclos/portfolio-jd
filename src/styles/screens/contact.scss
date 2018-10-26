@@ -1,0 +1,153 @@
+@import "../configs/colors.scss";
+
+.contact-container {
+  width: 100%;
+  margin-bottom: 50px;
+
+  .contact-illustration-container {
+    width: 100%;
+    height: 730px;
+    position: relative;
+
+    .contact-text {
+      background-color: $white;
+      color: $background;
+      width: 50%;
+      padding: 240px 80px;
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      h1 {
+        font-size: 70px;
+      }
+
+      p {
+        margin: 10px 0;
+      }
+
+      img {
+        position: absolute;
+        animation-name: formAnimation;
+        animation-duration: .5s;
+        transition: .3s;
+      }
+
+      .contactIllustrationOne {
+        top: 200px;
+        left: -500px;
+        z-index: 2;
+      }
+
+      .contactIllustrationTwo {
+        top: 500px;
+        left: -10px;
+        z-index: 3;
+      }
+
+      .contactIllustrationThree {
+        top: 130px;
+        left: -530px;
+        z-index: 4;
+      }
+
+      .contactIllustrationFour {
+        top: 0;
+        left: -350px;
+      }
+    }
+  }
+
+  .form-container {
+    margin: auto;
+    width: 48%;
+    z-index: 999;
+    animation-name: formAnimation;
+    animation-duration: .5s;
+    position: relative;
+    transition: .3s;
+
+    @media all and (max-width: 1200px) {
+      width: 70%;
+      transition: .3s;
+    }
+
+    a {
+      color: $white;
+      text-transform: uppercase;
+      border-bottom: 1px solid $white;
+      padding-bottom: 6px;
+      transform: rotate(270deg);
+      position: absolute;
+      top: 0;
+      left: -120px;
+    }
+
+    form {
+
+      input, textarea {
+        display: block;
+        background-color: transparent;
+        border: 0;
+        color: $white;
+        outline: none;
+      }
+
+      input:first-child, textarea {
+        width: 100%;
+        padding: 25px 20px;
+        font-size: 14px;
+        color: $background;
+      }
+
+      .inputInactive:first-child::placeholder, .inputInactive::placeholder {
+        color: $white;
+        opacity: 1;
+      }
+
+      .inputActive:first-child::placeholder, .inputActive::placeholder {
+        color: $background;
+        opacity: 1;
+      }
+
+      .inputInactive {
+        color: $white !important;
+        background-color: transparent;
+      }
+
+      .inputActive {
+        color: $background;
+        background-color: $white;
+      }
+
+      input:first-child, input:last-child {
+        border: 2px solid $white;
+      }
+
+      textarea {
+        border-left: 2px solid $white;
+        border-right: 2px solid $white;
+        border-bottom: 2px solid $white;
+        height: 300px;
+        resize: none;
+      }
+
+      input:last-child {
+        margin: 50px auto 0 auto;
+        padding: 15px 60px;
+      }
+
+      input:last-child:hover {
+        background-color: $white;
+        color: $background;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+
+@keyframes formAnimation {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
