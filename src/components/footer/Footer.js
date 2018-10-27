@@ -5,9 +5,9 @@ class Footer extends Component {
   render() {
     return (
       <footer className="flex row between">
+        <Link to={`/Content/${this.props.projectIndex - 1}`}/>
         <Link to="/Home"/>
-        <Link to="/Home"/>
-        <Link to="/Home"/>
+        <Link to={`/Content/${this.props.projectIndex + 1}`}/>
       </footer>
     );
   }

@@ -50,11 +50,11 @@ class Content extends Component {
             <img src={this.state.projectIllustration} alt=""/>
             <ProjectCategory
               loading={this.state.loading}
-              projectIndex={parseInt(this.state.projectIndex, 10)}
+              projectIndex={this.props.match.params.index++}
               projectCategory={this.state.projectCategory}
             />
           </div>
-          <Footer/>
+          <Footer projectIndex={this.props.match.params.index}/>
         </Container>
       </div>
     );
