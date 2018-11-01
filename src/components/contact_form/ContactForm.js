@@ -136,14 +136,14 @@ class ContactForm extends Component {
           <div className="contact-illustration-container">
 
             <div className="contact-text">
-              <h1>Hello !</h1>
+              <h1 className="upper">Hello !</h1>
               <p>Hi I’m Jeanne Duplessis.</p>
               <p>I’m currently in fifth year at ECV Digital Nantes and working in Rennes at Addviso.</p>
 
-              <img className="contactIllustrationOne" src={this.state.imageIllustrationOne} alt=""/>
-              <img className="contactIllustrationTwo" src={this.state.imageIllustrationTwo} alt=""/>
-              <img className="contactIllustrationThree" src={this.state.imageIllustrationThree} alt=""/>
-              <img className="contactIllustrationFour" src={this.state.imageIllustrationFour} alt=""/>
+              <img className="contactIllustrationOne" src={this.state.imageIllustrationOne} onLoad={console.log('ok')} alt=""/>
+              <img className="contactIllustrationTwo" src={this.state.imageIllustrationTwo} onLoad={console.log('ok')} alt=""/>
+              <img className="contactIllustrationThree" src={this.state.imageIllustrationThree} onLoad={console.log('ok')} alt=""/>
+              <img className="contactIllustrationFour" src={this.state.imageIllustrationFour} onLoad={console.log('ok')} alt=""/>
             </div>
 
           </div>

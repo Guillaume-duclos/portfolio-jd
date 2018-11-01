@@ -6,20 +6,21 @@
 
   .contact-illustration-container {
     width: 100%;
-    height: 730px;
+    height: 750px;
     position: relative;
 
     .contact-text {
       background-color: $white;
       color: $background;
       width: 50%;
-      padding: 240px 80px;
+      padding: 250px 80px;
       position: absolute;
       top: 0;
       right: 0;
 
       h1 {
         font-size: 70px;
+        font-family: 'BulterStencilBold', serif;
       }
 
       p {
