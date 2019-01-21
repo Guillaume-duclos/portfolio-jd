@@ -1,14 +1,48 @@
 .content {
-  border: 0px solid red; }
+  border: 0 solid white; }
 
-.projectHeader {
-  border: 1px solid red;
+.project-header {
   margin: 0 auto;
   position: relative;
   height: auto;
-  display: table; }
-  .projectHeader img {
+  display: table;
+  animation-name: project-header-anim;
+  animation-duration: .5s; }
+  .project-header img {
     width: 100%; }
-  .projectHeader .teaser-title {
+  .project-header .teaser-title {
     bottom: 60px;
-    right: -40px; }
+    right: -40px;
+    opacity: 0;
+    animation-name: teaser-title-anim;
+    animation-fill-mode: forwards;
+    animation-delay: .3s;
+    animation-duration: .5s; }
+
+@keyframes teaser-title-anim {
+  from {
+    right: -200px;
+    opacity: 0; }
+  to {
+    right: -40px;
+    opacity: 1; } }
+
+@keyframes project-header-anim {
+  from {
+    margin-top: -400px;
+    opacity: 0; }
+  to {
+    margin-top: 0;
+    opacity: 1; } }
+
+.project-title {
+  margin-top: 30px;
+  color: white;
+  font-family: "BulterStencilBold", Serif;
+  font-size: 52px;
+  letter-spacing: 3px; }
+
+.project-description {
+  color: white;
+  margin-top: 30px;
+  line-height: 26px; }

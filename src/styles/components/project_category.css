@@ -1,11 +1,8 @@
 .teaser-title {
-  border: 0px solid white;
   position: absolute;
-  width: auto;
-  transition: .3s; }
+  width: auto; }
   .teaser-title h2, .teaser-title h3 {
     color: white;
-    border: 0px solid white;
     display: block; }
   .teaser-title h2 {
     font-size: 3em;

@@ -1,7 +1,6 @@
 @import "../configs/colors.scss";
 
 .nav-bar {
-  border: 0px solid red;
   position: fixed;
   left: 50px;
   bottom: 100px;
@@ -38,7 +37,6 @@
   > ul li:first-child {
     margin-top: 0;
     position: relative;
-    border: 0px solid red;
 
     a {
       color: $white;

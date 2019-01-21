@@ -7,8 +7,8 @@ class Circle extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      loadingAnimationDuration: 2,
-      teaserAnimationDuration: 2,
+      loadingAnimationDuration: 3,
+      teaserAnimationDuration: 3,
       updateProgress: 0,
       previousProgress: 0
     }
@@ -16,21 +16,11 @@ class Circle extends Component {
 
   componentDidMount() {
     this.circleLoadingAnimation();
-    /*if(this.props.loading === true) {
-      this.circleLoadingAnimation();
-    } else {
-      this.circleTeaserAnimation();
-    }*/
   }
 
   componentDidUpdate() {
     TweenMax.killAll();
     this.animationTransition();
-    /*if(this.props.loading === true) {
-      this.circleLoadingAnimation();
-    } else {
-      this.circleTeaserAnimation();
-    }*/
   }
 
   componentWillUnmount() {
@@ -43,6 +33,14 @@ class Circle extends Component {
     } else {
       this.circleTeaserAnimation();
     }
+  }
+
+  animationSemiCompleted = () => {
+    this.props.un();
+  }
+
+  animationCompleted = () => {
+    this.props.updateProjectIndex();
   }
 
   circleLoadingAnimation = () => {
@@ -58,18 +56,6 @@ class Circle extends Component {
       },
       {
         drawSVG: this.state.updateProgress + '0% 100%',
-        ease: Power1.easeOut
-      }
-    )
-    .fromTo(
-      this.refs.circle,
-      this.state.loadingAnimationDuration,
-      {
-        drawSVG: this.state.previousProgress + '0% 100%',
-        ease: Power1.easeOut
-      },
-      {
-        drawSVG: this.state.updateProgress + '100% 100%',
         ease: Power1.easeOut,
         onComplete: this.animationTransition
       }
@@ -92,7 +78,7 @@ class Circle extends Component {
         drawSVG: "100%",
         ease: Linear.easeOut,
         callbackScope: this,
-        onComplete: this.props.updateProjectIndex
+        onComplete: this.animationCompleted
       }
     )
   }

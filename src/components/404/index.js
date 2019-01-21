@@ -1,6 +1,6 @@
-import React, {Component} from 'react';
-import {TweenMax, Linear, TimelineMax} from 'gsap';
-import {Link, Redirect} from 'react-router-dom';
+import React, { Component } from 'react';
+import { TweenMax, Linear, TimelineMax } from 'gsap';
+import { Link, Redirect } from 'react-router-dom';
 import '../../utils/DrawSVGPlugin';
 
 class TeaserCircle extends Component {
@@ -8,7 +8,7 @@ class TeaserCircle extends Component {
   state = {
     animDuration: 15,
     redirect: false
-  }
+  };
 
   componentDidMount() {
     let circleAnimation = new TimelineMax({
@@ -36,13 +36,12 @@ class TeaserCircle extends Component {
   redirectUpdate = () => {
     TweenMax.killAll();
     this.setState({redirect: true});
-  }
+  };
 
   render() {
-    console.log(this.state.redirect);
     if(this.state.redirect === true) {
       return (
-        <Redirect to="/home"/>
+        <Redirect to="/Home"/>
       );
     } else {
       return (

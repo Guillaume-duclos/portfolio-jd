@@ -140,16 +140,16 @@ class ContactForm extends Component {
               <p>Hi I’m Jeanne Duplessis.</p>
               <p>I’m currently in fifth year at ECV Digital Nantes and working in Rennes at Addviso.</p>
 
-              <img className="contactIllustrationOne" src={this.state.imageIllustrationOne} onLoad={console.log('ok')} alt=""/>
-              <img className="contactIllustrationTwo" src={this.state.imageIllustrationTwo} onLoad={console.log('ok')} alt=""/>
-              <img className="contactIllustrationThree" src={this.state.imageIllustrationThree} onLoad={console.log('ok')} alt=""/>
-              <img className="contactIllustrationFour" src={this.state.imageIllustrationFour} onLoad={console.log('ok')} alt=""/>
+              <img className="contactIllustrationOne" src={this.state.imageIllustrationOne} alt=""/>
+              <img className="contactIllustrationTwo" src={this.state.imageIllustrationTwo} alt=""/>
+              <img className="contactIllustrationThree" src={this.state.imageIllustrationThree} alt=""/>
+              <img className="contactIllustrationFour" src={this.state.imageIllustrationFour} alt=""/>
             </div>
 
           </div>
 
           <div className="form-container">
-            <a href="">Download my CV</a>
+            <p>Download my CV <a href="../../files/Jeanne-Duplessis-CV-en.pdf" target="_blank">EN</a> / <a href="../../files/Jeanne-Duplessis-CV-fr.pdf" target="_blank">FR</a></p>
             <form>
               <input
                 ref="emailField"

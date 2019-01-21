@@ -12,7 +12,7 @@ const Routes = () => {
         <Route path="/" exact component={Home} />
         <Route path="/Home" exact name="home" component={Home} />
         <Route path="/Contact" exact name="contact" component={Contact} />
-        <Route path="/Content/:index" exact name="content" component={Content} />
+        <Route path="/Content/:index" name="content" component={Content} />
         <Route path="*" exact component={NotFound} />
       </Switch>
     </HashRouter>

@@ -1,17 +1,19 @@
 footer {
   margin-top: 50px;
   z-index: 2; }
-  footer a {
+  footer a, footer div {
     border-radius: 50%; }
-    footer a:nth-child(1), footer a:nth-child(3) {
+    footer a:nth-child(1), footer a:nth-child(3), footer div:nth-child(1), footer div:nth-child(3) {
       width: 15px;
       height: 15px;
       background-color: white;
       margin: auto 50px; }
-    footer a:nth-child(2) {
+    footer a:nth-child(2), footer div:nth-child(2) {
       width: 35px;
       height: 35px;
       border: 2px solid white;
       background-color: transparent; }
-      footer a:nth-child(2):hover {
+      footer a:nth-child(2):hover, footer div:nth-child(2):hover {
         border: 3px solid white; }
+  footer div {
+    background-color: rgba(255, 255, 255, 0.1) !important; }

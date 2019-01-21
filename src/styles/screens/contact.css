@@ -50,15 +50,20 @@
       .contact-container .form-container {
         width: 70%;
         transition: .3s; } }
-    .contact-container .form-container a {
+    .contact-container .form-container p {
       color: white;
       text-transform: uppercase;
       border-bottom: 1px solid white;
       padding-bottom: 6px;
       transform: rotate(270deg);
       position: absolute;
-      top: 0;
-      left: -120px; }
+      top: 50px;
+      left: -150px; }
+      .contact-container .form-container p a {
+        color: white;
+        margin: 8px; }
+        .contact-container .form-container p a:last-child {
+          margin-right: 0; }
     .contact-container .form-container form input, .contact-container .form-container form textarea {
       display: block;
       background-color: transparent;

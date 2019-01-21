@@ -37,8 +37,11 @@ a {
 .upper {
   text-transform: uppercase; }
 
+.text-center {
+  text-align: center; }
+
 .container {
-  padding: 0 100px;
+  padding: 0 200px;
   width: 100%;
   min-height: 100vh; }
 
@@ -59,19 +62,53 @@ a {
   overflow: hidden; }
 
 .content {
-  border: 0px solid red; }
+  border: 0 solid white; }
 
-.projectHeader {
-  border: 1px solid red;
+.project-header {
   margin: 0 auto;
   position: relative;
   height: auto;
-  display: table; }
-  .projectHeader img {
+  display: table;
+  animation-name: project-header-anim;
+  animation-duration: .5s; }
+  .project-header img {
     width: 100%; }
-  .projectHeader .teaser-title {
+  .project-header .teaser-title {
     bottom: 60px;
-    right: -40px; }
+    right: -40px;
+    opacity: 0;
+    animation-name: teaser-title-anim;
+    animation-fill-mode: forwards;
+    animation-delay: .3s;
+    animation-duration: .5s; }
+
+@keyframes teaser-title-anim {
+  from {
+    right: -200px;
+    opacity: 0; }
+  to {
+    right: -40px;
+    opacity: 1; } }
+
+@keyframes project-header-anim {
+  from {
+    margin-top: -400px;
+    opacity: 0; }
+  to {
+    margin-top: 0;
+    opacity: 1; } }
+
+.project-title {
+  margin-top: 30px;
+  color: white;
+  font-family: "BulterStencilBold", Serif;
+  font-size: 52px;
+  letter-spacing: 3px; }
+
+.project-description {
+  color: white;
+  margin-top: 30px;
+  line-height: 26px; }
 
 .contact-container {
   width: 100%;
@@ -125,15 +162,20 @@ a {
       .contact-container .form-container {
         width: 70%;
         transition: .3s; } }
-    .contact-container .form-container a {
+    .contact-container .form-container p {
       color: white;
       text-transform: uppercase;
       border-bottom: 1px solid white;
       padding-bottom: 6px;
       transform: rotate(270deg);
       position: absolute;
-      top: 0;
-      left: -120px; }
+      top: 50px;
+      left: -150px; }
+      .contact-container .form-container p a {
+        color: white;
+        margin: 8px; }
+        .contact-container .form-container p a:last-child {
+          margin-right: 0; }
     .contact-container .form-container form input, .contact-container .form-container form textarea {
       display: block;
       background-color: transparent;
@@ -263,9 +305,8 @@ a {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 9999999;
-  border-radius: 50%;
-  border: 0px solid red; }
+  z-index: 1;
+  border-radius: 50%; }
   .teaser .teaser-text-container canvas {
     margin: auto;
     width: 100%;
@@ -276,7 +317,8 @@ a {
 
 .teaser .teaser-title {
   top: 60px;
-  right: -90px; }
+  right: -90px;
+  z-index: 1; }
   @media all and (max-width: 1800px) {
     .teaser .teaser-title {
       right: -110px; } }
@@ -311,8 +353,29 @@ a {
       top: 20px;
       right: -140px; } }
 
+.teaser .teaser-animated-background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1; }
+  .teaser .teaser-animated-background img {
+    width: 100%;
+    height: 100%; }
+  .teaser .teaser-animated-background:hover img {
+    transform: scale(3);
+    transition: 1s; }
+
+.teaser .teaser-animated-background-hidden {
+  display: none; }
+
+.teaser .teaser-animated-background-visible {
+  display: block; }
+
 .nav-bar {
-  border: 0px solid red;
   position: fixed;
   left: 50px;
   bottom: 100px;
@@ -340,8 +403,7 @@ a {
     color: rgba(255, 255, 255, 0.1); }
   .nav-bar > ul li:first-child {
     margin-top: 0;
-    position: relative;
-    border: 0px solid red; }
+    position: relative; }
     .nav-bar > ul li:first-child a {
       color: white; }
   .nav-bar .contact-through::before {
@@ -371,22 +433,14 @@ a {
   height: 40vw;
   margin: auto;
   position: relative;
+  border-radius: 50%;
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-  animation-duration: 1s;
-  animation-name: teaserBackgroundAnimation;
-  border-radius: 50%; }
+  background-repeat: no-repeat; }
   @media all and (max-width: 1300px) {
     .circle {
       width: 50vw;
       height: 50vw; } }
-
-@keyframes teaserBackgroundAnimation {
-  from {
-    background-size: 130%; }
-  to {
-    background-size: 100%; } }
   .circle svg {
     overflow: visible;
     width: 100%;
@@ -396,14 +450,21 @@ a {
       stroke: #FFFFFF;
       stroke-width: 1.5px; }
 
+.teaser-illustration-active {
+  animation-duration: 1s;
+  animation-name: teaserBackgroundAnimation; }
+
+@keyframes teaserBackgroundAnimation {
+  from {
+    background-size: 130%; }
+  to {
+    background-size: 100%; } }
+
 .teaser-title {
-  border: 0px solid white;
   position: absolute;
-  width: auto;
-  transition: .3s; }
+  width: auto; }
   .teaser-title h2, .teaser-title h3 {
     color: white;
-    border: 0px solid white;
     display: block; }
   .teaser-title h2 {
     font-size: 3em;
@@ -420,17 +481,19 @@ a {
 footer {
   margin-top: 50px;
   z-index: 2; }
-  footer a {
+  footer a, footer div {
     border-radius: 50%; }
-    footer a:nth-child(1), footer a:nth-child(3) {
+    footer a:nth-child(1), footer a:nth-child(3), footer div:nth-child(1), footer div:nth-child(3) {
       width: 15px;
       height: 15px;
       background-color: white;
       margin: auto 50px; }
-    footer a:nth-child(2) {
+    footer a:nth-child(2), footer div:nth-child(2) {
       width: 35px;
       height: 35px;
       border: 2px solid white;
       background-color: transparent; }
-      footer a:nth-child(2):hover {
+      footer a:nth-child(2):hover, footer div:nth-child(2):hover {
         border: 3px solid white; }
+  footer div {
+    background-color: rgba(255, 255, 255, 0.1) !important; }

@@ -4,7 +4,7 @@ footer {
   margin-top: 50px;
   z-index: 2;
 
-  a {
+  a, div {
     border-radius:  50%;
 
     &:nth-child(1), &:nth-child(3) {
@@ -24,5 +24,9 @@ footer {
         border: 3px solid $white;
       }
     }
+  }
+
+  div {
+    background-color: $whiteTransparency !important;
   }
 }

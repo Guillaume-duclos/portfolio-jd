@@ -1,5 +1,4 @@
 .nav-bar {
-  border: 0px solid red;
   position: fixed;
   left: 50px;
   bottom: 100px;
@@ -27,8 +26,7 @@
     color: rgba(255, 255, 255, 0.1); }
   .nav-bar > ul li:first-child {
     margin-top: 0;
-    position: relative;
-    border: 0px solid red; }
+    position: relative; }
     .nav-bar > ul li:first-child a {
       color: white; }
   .nav-bar .contact-through::before {

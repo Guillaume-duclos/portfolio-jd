@@ -1,14 +1,11 @@
 @import "../configs/colors.scss";
 
 .teaser-title {
-  border: 0px solid $white;
   position: absolute;
   width: auto;
-  transition: .3s;
 
   h2, h3 {
     color: $white;
-    border: 0px solid $white;
     display: block;
   }
 

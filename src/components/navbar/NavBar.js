@@ -8,18 +8,25 @@ class NavBar extends Component {
 
   items = () => {
     let items = [];
-    for(let i = this.props.projectNumber - 1; i >= 0; i--) {
+    for (let i = this.props.projectNumber - 1; i >= 0; i--) {
       let currentIndex = i;
-      items.push(
-        <li key={i}>
-          <Link
-            to={'/Content/' + currentIndex}
-            style={this.props.currentIndex === i ? {color: activeColor, transition: '.1s'} : {color: inactiveColor}}
-          >
-            0{i + 1}
-          </Link>
-        </li>
-      )
+      if (this.props.currentIndex === i) {
+        items.push(
+          <li key={i}>
+            <p style={{color: activeColor, transition: '.1s'}}>
+              0{i + 1}
+            </p>
+          </li>
+        )
+      } else {
+        items.push(
+          <li key={i}>
+            <Link to={'/Content/' + currentIndex} style={{color: inactiveColor}}>
+              0{i + 1}
+            </Link>
+          </li>
+        )
+      }
     }
     return items;
   };
