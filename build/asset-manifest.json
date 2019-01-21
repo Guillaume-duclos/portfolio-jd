@@ -1,11 +1,12 @@
 {
-  "main.css": "static/css/main.409438e3.css",
-  "main.css.map": "static/css/main.409438e3.css.map",
-  "main.js": "static/js/main.526c87aa.js",
-  "main.js.map": "static/js/main.526c87aa.js.map",
+  "main.css": "static/css/main.6177e1b5.css",
+  "main.css.map": "static/css/main.6177e1b5.css.map",
+  "main.js": "static/js/main.2c593d7d.js",
+  "main.js.map": "static/js/main.2c593d7d.js.map",
   "static/media/butler_stencil_bold.woff2": "static/media/butler_stencil_bold.f0134394.woff2",
   "static/media/gif-404.gif": "static/media/gif-404.de07bab3.gif",
   "static/media/gif-loading-contact.gif": "static/media/gif-loading-contact.29e6f3d9.gif",
+  "static/media/gif-loading-content.gif": "static/media/gif-loading-content.d4f81444.gif",
   "static/media/gif-sending-message.gif": "static/media/gif-sending-message.3f23dd13.gif",
   "static/media/logo.svg": "static/media/logo.3736fc65.svg"
 }
