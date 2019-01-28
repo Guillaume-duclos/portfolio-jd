@@ -40,11 +40,6 @@ a {
 .text-center {
   text-align: center; }
 
-.container {
-  padding: 0 200px;
-  width: 100%;
-  min-height: 100vh; }
-
 .loading-page {
   position: absolute;
   width: 100%;
@@ -60,9 +55,6 @@ a {
 
 .home {
   overflow: hidden; }
-
-.content {
-  border: 0 solid white; }
 
 .project-header {
   margin: 0 auto;
@@ -107,8 +99,15 @@ a {
 
 .project-description {
   color: white;
-  margin-top: 30px;
+  margin: 30px 200px 50px 200px;
   line-height: 26px; }
+
+.project-strats img {
+  display: block;
+  margin: auto; }
+
+.project-strats .strat-full-width {
+  width: 100%; }
 
 .contact-container {
   width: 100%;
@@ -242,6 +241,10 @@ a {
   .vertical-lines > div:last-child {
     border-right: 0; }
 
+.container {
+  width: 100%;
+  min-height: 100vh; }
+
 .logo {
   border: 0px solid red;
   position: fixed;
@@ -314,44 +317,6 @@ a {
   .teaser .teaser-text-container .teaser-text {
     width: 100%;
     margin: auto; }
-
-.teaser .teaser-title {
-  top: 60px;
-  right: -90px;
-  z-index: 1; }
-  @media all and (max-width: 1800px) {
-    .teaser .teaser-title {
-      right: -110px; } }
-  @media all and (max-width: 1700px) {
-    .teaser .teaser-title {
-      top: 50px;
-      right: -110px; } }
-  @media all and (max-width: 1600px) {
-    .teaser .teaser-title {
-      top: 40px; } }
-  @media all and (max-width: 1500px) {
-    .teaser .teaser-title {
-      top: 30px; } }
-  @media all and (max-width: 1400px) {
-    .teaser .teaser-title {
-      top: 20px;
-      right: -120px; } }
-  @media all and (max-width: 1300px) {
-    .teaser .teaser-title {
-      top: 50px;
-      right: -125px; } }
-  @media all and (max-width: 1200px) {
-    .teaser .teaser-title {
-      top: 40px;
-      right: -130px; } }
-  @media all and (max-width: 1100px) {
-    .teaser .teaser-title {
-      top: 30px;
-      right: -130px; } }
-  @media all and (max-width: 1100px) {
-    .teaser .teaser-title {
-      top: 20px;
-      right: -140px; } }
 
 .teaser .teaser-animated-background {
   width: 100%;
@@ -450,11 +415,21 @@ a {
       stroke: #FFFFFF;
       stroke-width: 1.5px; }
 
-.teaser-illustration-active {
+.teaser-illustration-one {
   animation-duration: 1s;
-  animation-name: teaserBackgroundAnimation; }
+  animation-name: teaserBackgroundAnimationOne; }
 
-@keyframes teaserBackgroundAnimation {
+.teaser-illustration-two {
+  animation-duration: 1s;
+  animation-name: teaserBackgroundAnimationTwo; }
+
+@keyframes teaserBackgroundAnimationOne {
+  from {
+    background-size: 130%; }
+  to {
+    background-size: 100%; } }
+
+@keyframes teaserBackgroundAnimationTwo {
   from {
     background-size: 130%; }
   to {
@@ -462,7 +437,10 @@ a {
 
 .teaser-title {
   position: absolute;
-  width: auto; }
+  width: auto;
+  top: 60px;
+  right: -120px;
+  z-index: 1; }
   .teaser-title h2, .teaser-title h3 {
     color: white;
     display: block; }
@@ -478,8 +456,32 @@ a {
     font-weight: normal;
     letter-spacing: 1px; }
 
+.teaser-title-animation-one {
+  animation-name: teaser-title-animation-one;
+  animation-duration: .4s; }
+
+.teaser-title-animation-two {
+  animation-name: teaser-title-animation-two;
+  animation-duration: .4s; }
+
+@keyframes teaser-title-animation-one {
+  from {
+    opacity: 0;
+    right: -220px; }
+  to {
+    opacity: 1;
+    right: -120px; } }
+
+@keyframes teaser-title-animation-two {
+  from {
+    opacity: 0;
+    right: -220px; }
+  to {
+    opacity: 1;
+    right: -120px; } }
+
 footer {
-  margin-top: 50px;
+  margin: 50px 0;
   z-index: 2; }
   footer a, footer div {
     border-radius: 50%; }

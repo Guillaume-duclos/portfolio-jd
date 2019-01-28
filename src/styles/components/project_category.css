@@ -1,6 +1,9 @@
 .teaser-title {
   position: absolute;
-  width: auto; }
+  width: auto;
+  top: 60px;
+  right: -120px;
+  z-index: 1; }
   .teaser-title h2, .teaser-title h3 {
     color: white;
     display: block; }
@@ -15,3 +18,27 @@
     text-transform: uppercase;
     font-weight: normal;
     letter-spacing: 1px; }
+
+.teaser-title-animation-one {
+  animation-name: teaser-title-animation-one;
+  animation-duration: .4s; }
+
+.teaser-title-animation-two {
+  animation-name: teaser-title-animation-two;
+  animation-duration: .4s; }
+
+@keyframes teaser-title-animation-one {
+  from {
+    opacity: 0;
+    right: -220px; }
+  to {
+    opacity: 1;
+    right: -120px; } }
+
+@keyframes teaser-title-animation-two {
+  from {
+    opacity: 0;
+    right: -220px; }
+  to {
+    opacity: 1;
+    right: -120px; } }

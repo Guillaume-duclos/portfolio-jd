@@ -61,15 +61,7 @@ class Home extends Component {
       });
     }
 
-    this.setState({animationActive: true});
-    setTimeout(() => {
-      //this.setState({animationActive: false});
-      this.un();
-    }, 1000);
-  };
-
-  un = () => {
-    this.setState({animationActive: false});
+    this.setState({animationActive: !this.state.animationActive});
   };
 
   redirectedToContent = () => {
@@ -92,7 +84,6 @@ class Home extends Component {
             teaserText={this.state.teaserText}
             projectCategory={this.state.projectCategory}
             updateProjectIndex={this.updateProjectIndex}
-            un={this.un}
             animationActive={this.state.animationActive}
             redirectedToContent={this.redirectedToContent}
             teaserAnimatedBackgroundActive={this.state.teaserAnimatedBackgroundActive}

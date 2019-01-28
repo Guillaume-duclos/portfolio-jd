@@ -33,15 +33,11 @@ class Circle extends Component {
     } else {
       this.circleTeaserAnimation();
     }
-  }
-
-  animationSemiCompleted = () => {
-    this.props.un();
-  }
+  };
 
   animationCompleted = () => {
     this.props.updateProjectIndex();
-  }
+  };
 
   circleLoadingAnimation = () => {
     let circleAnimation = new TimelineMax({
@@ -60,7 +56,7 @@ class Circle extends Component {
         onComplete: this.animationTransition
       }
     )
-  }
+  };
 
   circleTeaserAnimation = () => {
     let circleAnimation = new TimelineMax({
@@ -81,7 +77,7 @@ class Circle extends Component {
         onComplete: this.animationCompleted
       }
     )
-  }
+  };
 
   render() {
     return (

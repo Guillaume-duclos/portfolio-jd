@@ -1,7 +1,7 @@
 @import "../configs/colors.scss";
 
 .content {
-  border: 0 solid white;
+
 }
 
 .project-header {
@@ -47,6 +47,18 @@
 
 .project-description {
   color: $white;
-  margin-top: 30px;
+  margin: 30px 200px 50px 200px;
   line-height: 26px;
+}
+
+.project-strats {
+
+  img {
+    display: block;
+    margin: auto;
+  }
+
+  .strat-full-width {
+    width: 100%;
+  }
 }

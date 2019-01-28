@@ -24,6 +24,13 @@ class Content extends Component {
     this.getDatas();
   }
 
+  componentDidUpdate() {
+    if (!this.state.loading) {
+      this.refs.desc.innerHTML = this.state.datas.project_description;
+    }
+    console.log(this.state.datas)
+  }
+
   componentWillReceiveProps(newProps) {
     this.setState({
       loading: true,
@@ -44,20 +51,29 @@ class Content extends Component {
         });
       })
       .catch(error => {
-        if(error.response) {
+        if (error.response) {
           console.log(error.responderEnd);
         }
       });
   };
 
+  renderStrats = () => {
+    let strats = [];
+    for (let i = 0; i < this.state.datas.strats_contents.length; i++) {
+      if (this.state.datas.strats_contents[i].description === "full-width") {
+        strats.push(
+          <img src={this.state.datas.strats_contents[i].url} className="strat-full-width" alt="" key={i}/>
+        );
+      } else {
+        strats.push(
+          <img src={this.state.datas.strats_contents[i].url} alt="" key={i}/>
+        );
+      }
+    }
+    return strats;
+  };
+
   render() {
-
-    let html = "<p>Un text</p>";
-    let div = document.createElement("div");
-    div.innerHTML = html;
-    let text = div.textContent || div.innerText || "";
-    console.log(text);
-
     if (this.state.loading) {
       return (
         <Loader gif={gifLoadingContent}/>
@@ -75,8 +91,9 @@ class Content extends Component {
               />
             </div>
             <h1 className="project-title text-center upper">{this.state.datas.project_title}</h1>
-            <div className="project-description">
-              {this.state.datas.project_description}
+            <div ref="desc" className="project-description"></div>
+            <div className="project-strats">
+              {this.renderStrats()}
             </div>
             <Footer projectIndex={this.props.match.params.index} projectNumber={this.state.projectNumber}/>
           </Container>
