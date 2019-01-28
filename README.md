@@ -1,3 +1,3 @@
 Portfolio of Jeanne Duplessis.
 
-Preview comming soon.
+Preview : https://guillaume-duclos.github.io/portfolio-jd
