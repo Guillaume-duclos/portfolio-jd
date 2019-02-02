@@ -109,6 +109,13 @@ a {
 .project-strats .strat-full-width {
   width: 100%; }
 
+.project-strats .animated {
+  margin-top: 100px; }
+
+.project-strats .animated.fadeIn {
+  transition: .7s;
+  margin: 0; }
+
 .contact-container {
   width: 100%;
   margin-bottom: 50px; }

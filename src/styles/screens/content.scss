@@ -1,9 +1,5 @@
 @import "../configs/colors.scss";
 
-.content {
-
-}
-
 .project-header {
   margin: 0 auto;
   position: relative;
@@ -60,5 +56,14 @@
 
   .strat-full-width {
     width: 100%;
+  }
+
+  .animated {
+    margin-top: 100px;
+  }
+
+  .animated.fadeIn {
+    transition: .7s;
+    margin: 0;
   }
 }

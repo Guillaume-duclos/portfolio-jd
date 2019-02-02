@@ -5,6 +5,7 @@ import ProjectCategory from "../components/project_category/ProjectCategory";
 import Footer from '../components/footer/Footer';
 import gifLoadingContent from '../assets/gifs/gif-loading-content.gif';
 import Loader from '../components/loader/Loader';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 class Content extends Component {
 
@@ -62,11 +63,15 @@ class Content extends Component {
     for (let i = 0; i < this.state.datas.strats_contents.length; i++) {
       if (this.state.datas.strats_contents[i].description === "full-width") {
         strats.push(
-          <img src={this.state.datas.strats_contents[i].url} className="strat-full-width" alt="" key={i}/>
+          <ScrollAnimation animateOnce animateIn="fadeIn" key={i}>
+           <img src={this.state.datas.strats_contents[i].url} className="strat-full-width" alt="" key={i}/>
+          </ScrollAnimation>
         );
       } else {
         strats.push(
-          <img src={this.state.datas.strats_contents[i].url} alt="" key={i}/>
+          <ScrollAnimation animateOnce animateIn="fadeIn" key={i}>
+           <img src={this.state.datas.strats_contents[i].url} alt="" key={i}/>
+          </ScrollAnimation>
         );
       }
     }
@@ -91,7 +96,7 @@ class Content extends Component {
               />
             </div>
             <h1 className="project-title text-center upper">{this.state.datas.project_title}</h1>
-            <div ref="desc" className="project-description"></div>
+            <div ref="desc" className="project-description"/>
             <div className="project-strats">
               {this.renderStrats()}
             </div>
