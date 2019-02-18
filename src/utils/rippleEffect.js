@@ -2,7 +2,7 @@ import * as PIXI from 'pixi.js';
 
 const stage = new PIXI.Container();
 const renderer = PIXI.autoDetectRenderer(512, 512, {transparent: true});
-document.body.appendChild(renderer.view);
+document.querySelector('.teaser-text-container').appendChild(renderer.view);
 
 // load assets
 PIXI.loader
@@ -27,8 +27,6 @@ function setup() {
     positionX = event.clientX;
     positionY = event.clientY;
   }, false);
-
-  //console.log(positionX, positionY);
 
   let delta = 0;
 

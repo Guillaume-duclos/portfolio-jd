@@ -57,7 +57,7 @@
   }
 
   @keyframes throughAnimation {
-    from { height: 0px; }
+    from { height: 0; }
     to { height: 65px; }
   }
 
@@ -67,5 +67,10 @@
 
   > ul li a:hover {
     color: $white!important;
+  }
+
+  @media screen and (max-width: 600px) {
+    left: 10px;
+    bottom: 20px;
   }
 }

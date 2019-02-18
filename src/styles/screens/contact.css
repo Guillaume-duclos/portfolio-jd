@@ -16,6 +16,12 @@
       .contact-container .contact-illustration-container .contact-text h1 {
         font-size: 70px;
         font-family: 'BulterStencilBold', serif; }
+        @media screen and (max-width: 700px) {
+          .contact-container .contact-illustration-container .contact-text h1 {
+            font-size: 50px; } }
+        @media screen and (max-width: 500px) {
+          .contact-container .contact-illustration-container .contact-text h1 {
+            font-size: 40px; } }
       .contact-container .contact-illustration-container .contact-text p {
         margin: 10px 0; }
       .contact-container .contact-illustration-container .contact-text img {
@@ -27,17 +33,59 @@
         top: 200px;
         left: -500px;
         z-index: 2; }
+        @media screen and (max-width: 900px) {
+          .contact-container .contact-illustration-container .contact-text .contactIllustrationOne {
+            width: 500px; } }
+        @media screen and (max-width: 700px) {
+          .contact-container .contact-illustration-container .contact-text .contactIllustrationOne {
+            width: 400px;
+            left: -400px; } }
+        @media screen and (max-width: 500px) {
+          .contact-container .contact-illustration-container .contact-text .contactIllustrationOne {
+            width: 300px;
+            left: -300px; } }
       .contact-container .contact-illustration-container .contact-text .contactIllustrationTwo {
         top: 500px;
         left: -10px;
         z-index: 3; }
+        @media screen and (max-width: 900px) {
+          .contact-container .contact-illustration-container .contact-text .contactIllustrationTwo {
+            width: 300px; } }
+        @media screen and (max-width: 700px) {
+          .contact-container .contact-illustration-container .contact-text .contactIllustrationTwo {
+            width: 230px; } }
+        @media screen and (max-width: 500px) {
+          .contact-container .contact-illustration-container .contact-text .contactIllustrationTwo {
+            width: 180px; } }
       .contact-container .contact-illustration-container .contact-text .contactIllustrationThree {
         top: 130px;
         left: -530px;
         z-index: 4; }
+        @media screen and (max-width: 900px) {
+          .contact-container .contact-illustration-container .contact-text .contactIllustrationThree {
+            width: 300px;
+            left: -450px; } }
+        @media screen and (max-width: 700px) {
+          .contact-container .contact-illustration-container .contact-text .contactIllustrationThree {
+            width: 250px;
+            left: -300px; } }
+        @media screen and (max-width: 500px) {
+          .contact-container .contact-illustration-container .contact-text .contactIllustrationThree {
+            width: 200px;
+            left: -190px; } }
       .contact-container .contact-illustration-container .contact-text .contactIllustrationFour {
         top: 0;
         left: -350px; }
+        @media screen and (max-width: 700px) {
+          .contact-container .contact-illustration-container .contact-text .contactIllustrationFour {
+            width: 500px; } }
+      @media screen and (max-width: 900px) {
+        .contact-container .contact-illustration-container .contact-text {
+          padding: 250px 20px; } }
+      @media screen and (max-width: 600px) {
+        .contact-container .contact-illustration-container .contact-text {
+          padding: 200px 20px;
+          width: 65%; } }
   .contact-container .form-container {
     margin: auto;
     width: 48%;
@@ -48,8 +96,16 @@
     transition: .3s; }
     @media all and (max-width: 1200px) {
       .contact-container .form-container {
-        width: 70%;
-        transition: .3s; } }
+        width: 70%; } }
+    @media all and (max-width: 1000px) {
+      .contact-container .form-container {
+        width: 60%; } }
+    @media all and (max-width: 800px) {
+      .contact-container .form-container {
+        width: 55%; } }
+    @media all and (max-width: 600px) {
+      .contact-container .form-container {
+        width: 75%; } }
     .contact-container .form-container p {
       color: white;
       text-transform: uppercase;
@@ -64,10 +120,18 @@
         margin: 8px; }
         .contact-container .form-container p a:last-child {
           margin-right: 0; }
+      @media screen and (max-width: 600px) {
+        .contact-container .form-container p {
+          left: auto;
+          right: -140px; } }
+      @media screen and (max-width: 350px) {
+        .contact-container .form-container p {
+          right: -130px; } }
     .contact-container .form-container form input, .contact-container .form-container form textarea {
       display: block;
       background-color: transparent;
       border: 0;
+      border-radius: 0;
       color: white;
       outline: none; }
     .contact-container .form-container form input:first-child, .contact-container .form-container form textarea {

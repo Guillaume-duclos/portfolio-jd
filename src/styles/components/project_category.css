@@ -18,6 +18,9 @@
     text-transform: uppercase;
     font-weight: normal;
     letter-spacing: 1px; }
+  @media screen and (max-width: 600px) {
+    .teaser-title {
+      display: none; } }
 
 .teaser-title-animation-one {
   animation-name: teaser-title-animation-one;

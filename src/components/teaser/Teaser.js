@@ -40,7 +40,7 @@ class Teaser extends Component {
           loading={this.props.loading}
           updateProjectIndex={this.props.updateProjectIndex}
         />
-        <TeaserText teaserText={this.props.teaserText}/>
+        <TeaserText teaserText={this.props.teaserText} loading={this.props.loading}/>
         <ProjectCategory
           loading={this.props.loading}
           projectIndex={this.props.currentIndex}

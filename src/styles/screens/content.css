@@ -43,10 +43,14 @@
   color: white;
   margin: 30px 200px 50px 200px;
   line-height: 26px; }
+  @media screen and (max-width: 600px) {
+    .project-description {
+      margin: 30px 50px 50px 50px; } }
 
 .project-strats img {
   display: block;
-  margin: auto; }
+  margin: auto;
+  max-width: 100%; }
 
 .project-strats .strat-full-width {
   width: 100%; }

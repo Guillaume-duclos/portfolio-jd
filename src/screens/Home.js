@@ -23,7 +23,7 @@ class Home extends Component {
       windowWidth: window.innerWidth
     });
     window.addEventListener('resize', this.updateWindowDimension);
-    axios.get('https://guillaumeduclos.fr/jd-portfolio/wp-json/wp/v2/posts')
+    axios.get('http://guillaumeduclos.fr/jd-portfolio/wp-json/wp/v2/posts')
       .then(response => {
         this.setState({
           teaserDatas: response.data,
@@ -37,7 +37,7 @@ class Home extends Component {
         });
       })
       .catch(error => {
-        if(error.response) {
+        if (error.response) {
           console.log(error.responderEnd);
         }
       });
@@ -48,7 +48,7 @@ class Home extends Component {
   };
 
   updateProjectIndex = () => {
-    if(this.state.loading === false) {
+    if (this.state.loading === false) {
       this.setState(function ({currentIndex}) {
         const nextIndex = ++ currentIndex % this.state.teaserDatas.length;
         return {currentIndex: nextIndex};

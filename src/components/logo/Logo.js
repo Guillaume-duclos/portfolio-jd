@@ -25,6 +25,6 @@ const Logo = () => {
       </Link>
     </Tilt>
   );
-}
+};
 
 export default Logo;

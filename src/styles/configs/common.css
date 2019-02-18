@@ -46,4 +46,5 @@ a {
   z-index: 999;
   background-color: #171717; }
   .loading-page img {
-    margin: auto; }
+    margin: auto;
+    max-width: 100%; }

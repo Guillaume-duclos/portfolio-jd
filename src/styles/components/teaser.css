@@ -35,3 +35,7 @@
 
 .teaser .teaser-animated-background-visible {
   display: block; }
+
+.canvas {
+  width: 600px;
+  height: 600px; }

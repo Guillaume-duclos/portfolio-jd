@@ -47,7 +47,8 @@ a {
   z-index: 999;
   background-color: #171717; }
   .loading-page img {
-    margin: auto; }
+    margin: auto;
+    max-width: 100%; }
 
 @font-face {
   font-family: "BulterStencilBold";
@@ -101,10 +102,14 @@ a {
   color: white;
   margin: 30px 200px 50px 200px;
   line-height: 26px; }
+  @media screen and (max-width: 600px) {
+    .project-description {
+      margin: 30px 50px 50px 50px; } }
 
 .project-strats img {
   display: block;
-  margin: auto; }
+  margin: auto;
+  max-width: 100%; }
 
 .project-strats .strat-full-width {
   width: 100%; }
@@ -134,6 +139,12 @@ a {
       .contact-container .contact-illustration-container .contact-text h1 {
         font-size: 70px;
         font-family: 'BulterStencilBold', serif; }
+        @media screen and (max-width: 700px) {
+          .contact-container .contact-illustration-container .contact-text h1 {
+            font-size: 50px; } }
+        @media screen and (max-width: 500px) {
+          .contact-container .contact-illustration-container .contact-text h1 {
+            font-size: 40px; } }
       .contact-container .contact-illustration-container .contact-text p {
         margin: 10px 0; }
       .contact-container .contact-illustration-container .contact-text img {
@@ -145,17 +156,59 @@ a {
         top: 200px;
         left: -500px;
         z-index: 2; }
+        @media screen and (max-width: 900px) {
+          .contact-container .contact-illustration-container .contact-text .contactIllustrationOne {
+            width: 500px; } }
+        @media screen and (max-width: 700px) {
+          .contact-container .contact-illustration-container .contact-text .contactIllustrationOne {
+            width: 400px;
+            left: -400px; } }
+        @media screen and (max-width: 500px) {
+          .contact-container .contact-illustration-container .contact-text .contactIllustrationOne {
+            width: 300px;
+            left: -300px; } }
       .contact-container .contact-illustration-container .contact-text .contactIllustrationTwo {
         top: 500px;
         left: -10px;
         z-index: 3; }
+        @media screen and (max-width: 900px) {
+          .contact-container .contact-illustration-container .contact-text .contactIllustrationTwo {
+            width: 300px; } }
+        @media screen and (max-width: 700px) {
+          .contact-container .contact-illustration-container .contact-text .contactIllustrationTwo {
+            width: 230px; } }
+        @media screen and (max-width: 500px) {
+          .contact-container .contact-illustration-container .contact-text .contactIllustrationTwo {
+            width: 180px; } }
       .contact-container .contact-illustration-container .contact-text .contactIllustrationThree {
         top: 130px;
         left: -530px;
         z-index: 4; }
+        @media screen and (max-width: 900px) {
+          .contact-container .contact-illustration-container .contact-text .contactIllustrationThree {
+            width: 300px;
+            left: -450px; } }
+        @media screen and (max-width: 700px) {
+          .contact-container .contact-illustration-container .contact-text .contactIllustrationThree {
+            width: 250px;
+            left: -300px; } }
+        @media screen and (max-width: 500px) {
+          .contact-container .contact-illustration-container .contact-text .contactIllustrationThree {
+            width: 200px;
+            left: -190px; } }
       .contact-container .contact-illustration-container .contact-text .contactIllustrationFour {
         top: 0;
         left: -350px; }
+        @media screen and (max-width: 700px) {
+          .contact-container .contact-illustration-container .contact-text .contactIllustrationFour {
+            width: 500px; } }
+      @media screen and (max-width: 900px) {
+        .contact-container .contact-illustration-container .contact-text {
+          padding: 250px 20px; } }
+      @media screen and (max-width: 600px) {
+        .contact-container .contact-illustration-container .contact-text {
+          padding: 200px 20px;
+          width: 65%; } }
   .contact-container .form-container {
     margin: auto;
     width: 48%;
@@ -166,8 +219,16 @@ a {
     transition: .3s; }
     @media all and (max-width: 1200px) {
       .contact-container .form-container {
-        width: 70%;
-        transition: .3s; } }
+        width: 70%; } }
+    @media all and (max-width: 1000px) {
+      .contact-container .form-container {
+        width: 60%; } }
+    @media all and (max-width: 800px) {
+      .contact-container .form-container {
+        width: 55%; } }
+    @media all and (max-width: 600px) {
+      .contact-container .form-container {
+        width: 75%; } }
     .contact-container .form-container p {
       color: white;
       text-transform: uppercase;
@@ -182,10 +243,18 @@ a {
         margin: 8px; }
         .contact-container .form-container p a:last-child {
           margin-right: 0; }
+      @media screen and (max-width: 600px) {
+        .contact-container .form-container p {
+          left: auto;
+          right: -140px; } }
+      @media screen and (max-width: 350px) {
+        .contact-container .form-container p {
+          right: -130px; } }
     .contact-container .form-container form input, .contact-container .form-container form textarea {
       display: block;
       background-color: transparent;
       border: 0;
+      border-radius: 0;
       color: white;
       outline: none; }
     .contact-container .form-container form input:first-child, .contact-container .form-container form textarea {
@@ -253,7 +322,6 @@ a {
   min-height: 100vh; }
 
 .logo {
-  border: 0px solid red;
   position: fixed;
   left: 50px;
   top: 20px;
@@ -289,11 +357,9 @@ a {
       height: 150px;
       border-left: 2px solid white;
       border-right: 2px solid white;
-      border-top: 2px solid white;
-      border-bottom: 0px solid red; }
+      border-top: 2px solid white; }
       .logo a > div:nth-child(2) > div:nth-child(2) > p {
         color: white;
-        border: 0px solid red;
         text-align: left;
         margin: auto;
         width: 38px;
@@ -308,6 +374,11 @@ a {
       border-left: 2px solid white;
       border-right: 2px solid white;
       border-bottom: 2px solid white; }
+  @media screen and (max-width: 600px) {
+    .logo {
+      transform: scale(0.6);
+      top: 0;
+      left: 0; } }
 
 .teaser .teaser-text-container {
   width: 100%;
@@ -346,6 +417,10 @@ a {
 
 .teaser .teaser-animated-background-visible {
   display: block; }
+
+.canvas {
+  width: 600px;
+  height: 600px; }
 
 .nav-bar {
   position: fixed;
@@ -392,13 +467,17 @@ a {
 
 @keyframes throughAnimation {
   from {
-    height: 0px; }
+    height: 0; }
   to {
     height: 65px; } }
   .nav-bar > ul li:last-child {
     margin-bottom: 0; }
   .nav-bar > ul li a:hover {
     color: white !important; }
+  @media screen and (max-width: 600px) {
+    .nav-bar {
+      left: 10px;
+      bottom: 20px; } }
 
 .circle {
   width: 40vw;
@@ -409,10 +488,14 @@ a {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat; }
-  @media all and (max-width: 1300px) {
+  @media screen and (max-width: 1300px) {
     .circle {
       width: 50vw;
       height: 50vw; } }
+  @media screen and (max-width: 600px) {
+    .circle {
+      width: 75vw;
+      height: 75vw; } }
   .circle svg {
     overflow: visible;
     width: 100%;
@@ -462,6 +545,9 @@ a {
     text-transform: uppercase;
     font-weight: normal;
     letter-spacing: 1px; }
+  @media screen and (max-width: 600px) {
+    .teaser-title {
+      display: none; } }
 
 .teaser-title-animation-one {
   animation-name: teaser-title-animation-one;

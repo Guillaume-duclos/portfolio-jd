@@ -1,7 +1,6 @@
 @import "../configs/colors.scss";
 
 .logo {
-  border: 0px solid red;
   position: fixed;
   left: 50px;
   top: 20px;
@@ -54,11 +53,9 @@
       border-left: 2px solid $white;
       border-right: 2px solid $white;
       border-top: 2px solid $white;
-      border-bottom: 0px solid red;
 
       > p {
         color: $white;
-        border: 0px solid red;
         text-align: left;
         margin: auto;
         width: 38px;
@@ -79,5 +76,11 @@
       border-right: 2px solid $white;
       border-bottom: 2px solid $white;
     }
+  }
+
+  @media screen and (max-width: 600px) {
+    transform: scale(.6);
+    top: 0;
+    left: 0;
   }
 }

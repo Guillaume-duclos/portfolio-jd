@@ -43,10 +43,14 @@
 
 @keyframes throughAnimation {
   from {
-    height: 0px; }
+    height: 0; }
   to {
     height: 65px; } }
   .nav-bar > ul li:last-child {
     margin-bottom: 0; }
   .nav-bar > ul li a:hover {
     color: white !important; }
+  @media screen and (max-width: 600px) {
+    .nav-bar {
+      left: 10px;
+      bottom: 20px; } }

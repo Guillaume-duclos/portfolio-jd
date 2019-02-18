@@ -24,7 +24,7 @@ class ContactForm extends Component {
   };
 
   componentDidMount() {
-    axios.get('https://guillaumeduclos.fr/jd-portfolio/wp-json/wp/v2/pages')
+    axios.get('http://guillaumeduclos.fr/jd-portfolio/wp-json/wp/v2/pages')
       .then(response => {
         this.setState({
           imageIllustrationOne:   response.data[0].acf.images[0].url,

@@ -7,10 +7,14 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat; }
-  @media all and (max-width: 1300px) {
+  @media screen and (max-width: 1300px) {
     .circle {
       width: 50vw;
       height: 50vw; } }
+  @media screen and (max-width: 600px) {
+    .circle {
+      width: 75vw;
+      height: 75vw; } }
   .circle svg {
     overflow: visible;
     width: 100%;

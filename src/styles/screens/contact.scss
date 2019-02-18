@@ -21,6 +21,14 @@
       h1 {
         font-size: 70px;
         font-family: 'BulterStencilBold', serif;
+
+        @media screen and (max-width: 700px) {
+          font-size: 50px;
+        }
+
+        @media screen and (max-width: 500px) {
+          font-size: 40px;
+        }
       }
 
       p {
@@ -38,23 +46,77 @@
         top: 200px;
         left: -500px;
         z-index: 2;
+
+        @media screen and (max-width: 900px) {
+          width: 500px;
+        }
+
+        @media screen and (max-width: 700px) {
+          width: 400px;
+          left: -400px;
+        }
+
+        @media screen and (max-width: 500px) {
+          width: 300px;
+          left: -300px;
+        }
       }
 
       .contactIllustrationTwo {
         top: 500px;
         left: -10px;
         z-index: 3;
+
+        @media screen and (max-width: 900px) {
+          width: 300px;
+        }
+
+        @media screen and (max-width: 700px) {
+          width: 230px;
+        }
+
+        @media screen and (max-width: 500px) {
+          width: 180px;
+        }
       }
 
       .contactIllustrationThree {
         top: 130px;
         left: -530px;
         z-index: 4;
+
+        @media screen and (max-width: 900px) {
+          width: 300px;
+          left: -450px;
+        }
+
+        @media screen and (max-width: 700px) {
+          width: 250px;
+          left: -300px;
+        }
+
+        @media screen and (max-width: 500px) {
+          width: 200px;
+          left: -190px;
+        }
       }
 
       .contactIllustrationFour {
         top: 0;
         left: -350px;
+
+        @media screen and (max-width: 700px) {
+          width: 500px;
+        }
+      }
+
+      @media screen and (max-width: 900px) {
+        padding: 250px 20px;
+      }
+
+      @media screen and (max-width: 600px) {
+        padding: 200px 20px;
+        width: 65%;
       }
     }
   }
@@ -70,7 +132,18 @@
 
     @media all and (max-width: 1200px) {
       width: 70%;
-      transition: .3s;
+    }
+
+    @media all and (max-width: 1000px) {
+      width: 60%;
+    }
+
+    @media all and (max-width: 800px) {
+      width: 55%;
+    }
+
+    @media all and (max-width: 600px) {
+      width: 75%;
     }
 
     p {
@@ -91,6 +164,15 @@
           margin-right: 0;
         }
       }
+
+      @media screen and (max-width: 600px) {
+        left: auto;
+        right: -140px;
+      }
+
+      @media screen and (max-width: 350px) {
+        right: -130px;
+      }
     }
 
     form {
@@ -99,6 +181,7 @@
         display: block;
         background-color: transparent;
         border: 0;
+        border-radius: 0;
         color: $white;
         outline: none;
       }

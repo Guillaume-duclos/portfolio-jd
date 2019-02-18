@@ -41,7 +41,7 @@ class Content extends Component {
   }
 
   getDatas = () => {
-    axios.get('https://guillaumeduclos.fr/jd-portfolio/wp-json/wp/v2/posts')
+    axios.get('http://guillaumeduclos.fr/jd-portfolio/wp-json/wp/v2/posts')
       .then(response => {
         this.setState({
           datas: response.data[this.state.projectIndex].acf,

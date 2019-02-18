@@ -45,6 +45,10 @@
   color: $white;
   margin: 30px 200px 50px 200px;
   line-height: 26px;
+
+  @media screen and (max-width: 600px) {
+    margin: 30px 50px 50px 50px;
+  }
 }
 
 .project-strats {
@@ -52,6 +56,7 @@
   img {
     display: block;
     margin: auto;
+    max-width: 100%;
   }
 
   .strat-full-width {
