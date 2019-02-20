@@ -35,7 +35,7 @@ class ContactForm extends Component {
         });
       })
       .catch(error => {
-        if(error.response) {
+        if (error.response) {
           console.log(error.responderEnd);
         }
       });
