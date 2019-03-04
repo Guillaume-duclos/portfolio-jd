@@ -29,7 +29,6 @@ class Content extends Component {
     if (!this.state.loading) {
       this.refs.desc.innerHTML = this.state.datas.project_description;
     }
-    console.log(this.state.datas)
   }
 
   componentWillReceiveProps(newProps) {
