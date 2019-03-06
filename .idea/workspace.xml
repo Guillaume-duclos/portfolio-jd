@@ -2,35 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1bbef563-e666-4223-8152-95599e32194d" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/styles/components/cursor.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/Cursor.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/asset-manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/service-worker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/css/main.62215ec4.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/css/main.62215ec4.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/main.c8400ab7.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/main.c8400ab7.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/media/butler_stencil_bold.f0134394.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/media/gif-404.de07bab3.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/media/gif-loading-contact.29e6f3d9.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/media/gif-loading-content.d4f81444.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/media/gif-sending-message.3f23dd13.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/media/logo.3736fc65.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/contact_form/ContactForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/contact_form/ContactForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/container/Container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/container/Container.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/teaser/Teaser.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/teaser/Teaser.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/teaser/TeaserCircle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/teaser/TeaserCircle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/teaser/TeaserText.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/teaser/TeaserText.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/Content.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/Content.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/components/teaser.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/components/teaser.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/components/teaser.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/components/teaser.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/configs/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/configs/common.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/configs/common.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/configs/common.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/components/footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/components/footer.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/components/footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/components/footer.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/master/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/master/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/master/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/master/index.scss" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -91,14 +66,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/container/Container.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="216">
-              <caret line="37" column="7" lean-forward="true" selection-start-line="37" selection-start-column="7" selection-end-line="37" selection-end-column="7" />
+              <caret line="37" column="7" selection-start-line="37" selection-start-column="7" selection-end-line="37" selection-end-column="7" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/styles/components/footer.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="104">
+              <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -211,7 +195,6 @@
         <option value="$PROJECT_DIR$/src/components/navbar/NavBar.js" />
         <option value="$PROJECT_DIR$/src/components/project_category/ProjectCategory.js" />
         <option value="$PROJECT_DIR$/src/styles/components/container.scss" />
-        <option value="$PROJECT_DIR$/src/styles/components/footer.scss" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/utils/rippleEffect.js" />
         <option value="$PROJECT_DIR$/src/utils/Ripple.js" />
@@ -237,6 +220,7 @@
         <option value="$PROJECT_DIR$/src/components/teaser/Teaser.js" />
         <option value="$PROJECT_DIR$/src/styles/components/cursor.scss" />
         <option value="$PROJECT_DIR$/src/components/container/Container.js" />
+        <option value="$PROJECT_DIR$/src/styles/components/footer.scss" />
       </list>
     </option>
   </component>
@@ -276,6 +260,13 @@
               <item name="Site" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Site" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Site" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="footer" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Site" type="b2602c69:ProjectViewProjectNode" />
@@ -414,12 +405,12 @@
       <workItem from="1550517534486" duration="11721000" />
       <workItem from="1551643704931" duration="32000" />
       <workItem from="1551643779988" duration="887000" />
-      <workItem from="1551723929116" duration="15940000" />
+      <workItem from="1551723929116" duration="16099000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="383144000" />
+    <option name="totallyTimeSpent" value="383303000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -437,9 +428,9 @@
       <window_info id="npm" order="0" sideWeight="0.5013889" side_tool="true" weight="0.18816067" />
       <window_info id="Favorites" order="1" side_tool="true" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="3" sideWeight="0.49861112" visible="true" weight="0.18745595" />
+      <window_info active="true" content_ui="combo" id="Project" order="3" sideWeight="0.49861112" visible="true" weight="0.18745595" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="1" visible="true" weight="0.14171124" />
+      <window_info anchor="bottom" id="Terminal" order="1" visible="true" weight="0.14171124" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="3" weight="0.328877" />
       <window_info anchor="bottom" id="Message" order="4" />
@@ -540,13 +531,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/styles/components/footer.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -571,16 +555,6 @@
         <state>
           <folding>
             <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/footer/Footer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="20" column="8" lean-forward="true" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -845,13 +819,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/container/Container.js">
+    <entry file="file://$PROJECT_DIR$/src/components/footer/Footer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="37" column="7" lean-forward="true" selection-start-line="37" selection-start-column="7" selection-end-line="37" selection-end-column="7" />
+        <state relative-caret-position="508">
+          <caret line="20" column="8" lean-forward="true" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/container/Container.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="37" column="7" selection-start-line="37" selection-start-column="7" selection-end-line="37" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/styles/components/footer.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
         </state>
       </provider>
     </entry>

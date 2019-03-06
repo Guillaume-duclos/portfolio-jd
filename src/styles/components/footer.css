@@ -1,6 +1,6 @@
 footer {
   margin: 50px 0;
-  z-index: 2; }
+  z-index: 5; }
   footer a, footer div {
     border-radius: 50%; }
     footer a:nth-child(1), footer a:nth-child(3), footer div:nth-child(1), footer div:nth-child(3) {
