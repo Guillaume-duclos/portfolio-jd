@@ -1,0 +1,37 @@
+.cursor-area {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 5; }
+
+#cursor {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.7);
+  z-index: 4;
+  position: absolute;
+  display: none; }
+
+.cursor-displayed {
+  display: block !important; }
+
+.cursor-triggered {
+  animation: cursorBig .2s forwards; }
+
+.cursor-no-triggered {
+  animation: cursorNormal .2s forwards; }
+
+@keyframes cursorBig {
+  from {
+    transform: scale(1); }
+  to {
+    transform: scale(1.5); } }
+
+@keyframes cursorNormal {
+  from {
+    transform: scale(1.5); }
+  to {
+    transform: scale(1); } }

@@ -18,15 +18,53 @@ class Container extends Component {
         });
       })
       .catch(error => {
-        if(error.response) {
+        if (error.response) {
           console.log(error.responderEnd);
         }
       });
+
+    const cursor = document.createElement('div');
+    cursor.setAttribute('id', 'cursor');
+    this.refs.cursorArea.append(cursor);
+
+    document.addEventListener('mousemove', (event) => {
+      cursor.classList.add('cursor-displayed');
+      cursor.style.left = `${event.clientX - 15}px`;
+      cursor.style.top = `${event.clientY - 15}px`;
+      this.setState({
+        cursorPositionX: event.pageX,
+        cursorPositionY: event.pageY
+      });
+    });
+
+    document.addEventListener('mouseout', () => {
+      cursor.classList.remove('cursor-displayed');
+    });
+
+    if (this.props.page === "home") {
+      document.body.style.overflow = 'hidden';
+      document.querySelector('.teaser').addEventListener('mouseenter', () => {
+        cursor.classList.remove('cursor-no-triggered');
+        cursor.classList.add('cursor-triggered');
+      });
+
+      document.querySelector('.teaser').addEventListener('mouseout', () => {
+        cursor.classList.remove('cursor-triggered');
+        cursor.classList.add('cursor-no-triggered');
+      });
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+  }
+
+  componentWillUnmount() {
+    document.getElementById('cursor').remove();
   }
 
   render() {
     return (
       <div className="container flex column">
+        <div ref="cursorArea" className="cursor-area"/>
         <VerticalLines/>
         <Logo/>
         <NavBar

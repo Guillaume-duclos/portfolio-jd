@@ -12,6 +12,16 @@ class Teaser extends Component {
   componentDidMount() {
     this.setState({circleWidth: this.refs.circle.clientWidth});
     window.addEventListener('resize', this.updateCircleDimension);
+
+    this.refs.circle.addEventListener('mousemove', () => {
+      const cursor = document.getElementById('cursor');
+      cursor.classList.add('cursor-big');
+    });
+
+    this.refs.circle.addEventListener('mouseout', () => {
+      const cursor = document.getElementById('cursor');
+      cursor.classList.remove('cursor-big');
+    });
   }
 
   componentWillUnmount() {

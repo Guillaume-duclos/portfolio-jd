@@ -65,6 +65,7 @@ class Home extends Component {
   };
 
   redirectedToContent = () => {
+    console.log('REDIRECTED');
     this.setState({teaserAnimatedBackgroundActive: true});
     setTimeout(() => {
       this.props.history.push(`/Content/${this.state.currentIndex}`);

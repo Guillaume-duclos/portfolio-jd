@@ -20,6 +20,7 @@ class ContactForm extends Component {
     imageIllustrationThree: '',
     imageIllustrationFour: '',
     loading: true,
+    loadingData: true,
     messageSending: false
   };
 
@@ -33,8 +34,11 @@ class ContactForm extends Component {
           imageIllustrationTwo: response.data[0].acf.images[1].url,
           imageIllustrationThree: response.data[0].acf.images[2].url,
           imageIllustrationFour: response.data[0].acf.images[3].url,
-          loading: false
+          cvEnLink: response.data[0].acf.cv_en,
+          cvFrLink: response.data[0].acf.cv_fr,
+          loadingData: false
         });
+        this.setLoadingTime();
       })
       .catch(error => {
         if (error.response) {
@@ -45,7 +49,7 @@ class ContactForm extends Component {
   }
 
   componentDidUpdate() {
-    if (!this.state.loading) {
+    if (!this.state.loading && !this.state.messageSending) {
       this.refs.desc.innerHTML = this.state.presentationText;
     }
   }
@@ -53,6 +57,14 @@ class ContactForm extends Component {
   componentWillUnmount() {
     document.removeEventListener('mousedown', this.handleClickOutside);
   }
+
+  setLoadingTime = () => {
+    setTimeout(() => {
+      if (!this.state.loadingData) {
+        this.setState({loading: false});
+      }
+    }, 3000);
+  };
 
   handleClickOutside = (event) => {
     if (this.refs.emailField && !this.refs.emailField.contains(event.target) && this.refs.messageField && !this.refs.messageField.contains(event.target)) {
@@ -98,20 +110,17 @@ class ContactForm extends Component {
 
   sendMail = (e) => {
     if (this.state.emailValue !== '' && this.state.messageValue !== '' && this.refs.emailField.validity.valid !== false && this.refs.messageField.validity.valid !== false) {
-
       e.preventDefault();
-
       axios.defaults.headers.post['Content-Type'] = 'application/json';
-
       axios.post('https://www.enformed.io/vaihyuml/', {
         email: this.state.emailValue,
         message: this.state.messageValue
       })
-        .then(response => this.setState({messageSending: false}))
-        .catch(error => console.log('Sending mail error'));
-
-      this.setState({messageSending: true});
-
+      .then(response => this.setState({messageSending: false}))
+      .catch(error => console.log('Sending mail error'));
+      this.setState({
+        messageSending: true
+      });
     } else {
       console.log('ERROR');
     }
@@ -130,11 +139,11 @@ class ContactForm extends Component {
     }
 
     if (this.state.messageSending === true) {
-      return(
+      return (
         <Loader gif={gifLoadingSendingMessage}/>
       );
     } else if (this.state.loading === true) {
-      return(
+      return (
         <Loader gif={gifLoadingContactPage}/>
       );
     } else {
@@ -145,7 +154,7 @@ class ContactForm extends Component {
 
             <div className="contact-text">
               <h1 className="upper">{this.state.presentationTitle}</h1>
-              <div ref="desc"></div>
+              <div ref="desc"/>
               <img className="contactIllustrationOne" src={this.state.imageIllustrationOne} alt=""/>
               <img className="contactIllustrationTwo" src={this.state.imageIllustrationTwo} alt=""/>
               <img className="contactIllustrationThree" src={this.state.imageIllustrationThree} alt=""/>
@@ -155,7 +164,7 @@ class ContactForm extends Component {
           </div>
 
           <div className="form-container">
-            <p>Download my CV <a href="../../files/Jeanne-Duplessis-CV-en.pdf" target="_blank">EN</a> / <a href="../../files/Jeanne-Duplessis-CV-fr.pdf" target="_blank">FR</a></p>
+            <p>Download my CV <a href={this.state.cvEnLink} target="_blank">EN</a> / <a href={this.state.cvFrLink} target="_blank">FR</a></p>
             <form>
               <input
                 ref="emailField"

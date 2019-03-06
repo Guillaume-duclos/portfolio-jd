@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {TweenMax, Linear, TimelineMax} from 'gsap';
+import {TweenMax} from 'gsap';
 import '../../utils/DrawSVGPlugin';
 
 class TeaserCircle extends Component {

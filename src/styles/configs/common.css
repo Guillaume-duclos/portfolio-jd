@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  cursor: url("../../assets/cursor.png") 15 15, auto; }
+  cursor: none; }
 
 html, body {
   min-height: 100%; }

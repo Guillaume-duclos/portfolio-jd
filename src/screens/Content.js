@@ -13,21 +13,22 @@ class Content extends Component {
     super(props);
     this.state = {
       projectIndex: this.props.match.params.index,
-      datas: [],
+      data: [],
       projectIllustration: null,
       projectCategory: null,
       projectNumber: null,
-      loading: true
+      loading: true,
+      loadingData: true
     }
   }
 
   componentDidMount() {
-    this.getDatas();
+    this.getData();
   }
 
   componentDidUpdate() {
     if (!this.state.loading) {
-      this.refs.desc.innerHTML = this.state.datas.project_description;
+      this.refs.desc.innerHTML = this.state.data.project_description;
     }
   }
 
@@ -36,19 +37,28 @@ class Content extends Component {
       loading: true,
       projectIndex: newProps.match.params.index
     });
-    this.getDatas();
+    this.getData();
   }
 
-  getDatas = () => {
+  setLoadingTime = () => {
+    setTimeout(() => {
+      if (!this.state.loadingData) {
+        this.setState({loading: false});
+      }
+    }, 3000);
+  };
+
+  getData = () => {
     axios.get('https://guillaumeduclos.fr/jd-portfolio/wp-json/wp/v2/posts')
       .then(response => {
         this.setState({
-          datas: response.data[this.state.projectIndex].acf,
+          data: response.data[this.state.projectIndex].acf,
           projectIllustration: response.data[this.state.projectIndex].acf.project_content_illustration.url,
           projectCategory: response.data[this.state.projectIndex].acf.project_category,
           projectNumber: response.data.length,
-          loading: false
+          loadingData: false
         });
+        this.setLoadingTime();
       })
       .catch(error => {
         if (error.response) {
@@ -59,17 +69,17 @@ class Content extends Component {
 
   renderStrats = () => {
     let strats = [];
-    for (let i = 0; i < this.state.datas.strats_contents.length; i++) {
-      if (this.state.datas.strats_contents[i].description === "full-width") {
+    for (let i = 0; i < this.state.data.strats_contents.length; i++) {
+      if (this.state.data.strats_contents[i].description === "full-width") {
         strats.push(
           <ScrollAnimation animateOnce animateIn="fadeIn" key={i}>
-           <img src={this.state.datas.strats_contents[i].url} className="strat-full-width" alt="" key={i}/>
+           <img src={this.state.data.strats_contents[i].url} className="strat-full-width" alt="" key={i}/>
           </ScrollAnimation>
         );
       } else {
         strats.push(
           <ScrollAnimation animateOnce animateIn="fadeIn" key={i}>
-           <img src={this.state.datas.strats_contents[i].url} alt="" key={i}/>
+           <img src={this.state.data.strats_contents[i].url} alt="" key={i}/>
           </ScrollAnimation>
         );
       }
@@ -94,7 +104,7 @@ class Content extends Component {
                 projectCategory={this.state.projectCategory}
               />
             </div>
-            <h1 className="project-title text-center upper">{this.state.datas.project_title}</h1>
+            <h1 className="project-title text-center upper">{this.state.data.project_title}</h1>
             <div ref="desc" className="project-description"/>
             <div className="project-strats">
               {this.renderStrats()}
