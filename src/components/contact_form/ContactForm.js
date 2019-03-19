@@ -164,13 +164,13 @@ class ContactForm extends Component {
           </div>
 
           <div className="form-container">
-            <p>Download my CV <a href={this.state.cvEnLink} target="_blank">EN</a> / <a href={this.state.cvFrLink} target="_blank">FR</a></p>
+            <p>Download my CV <a href={this.state.cvEnLink} target="_blank" className="clickable">EN</a> / <a href={this.state.cvFrLink} target="_blank" className="clickable">FR</a></p>
             <form>
               <input
                 ref="emailField"
                 type="email"
                 placeholder={this.state.emailPlaceholder}
-                className={emailClassName}
+                className={`${emailClassName} clickable`}
                 onClick={(e) => this.activeField(e, 'emailField')}
                 onChange={(e) => this.getFieldValue(e, 'emailField')}
                 required="true"
@@ -178,12 +178,12 @@ class ContactForm extends Component {
               <textarea
                 ref="messageField"
                 placeholder={this.state.messagePlaceholder}
-                className={textareaClassName}
+                className={`${textareaClassName} clickable`}
                 onClick={(e) => this.activeField(e, 'messageField')}
                 onChange={(e) => this.getFieldValue(e, 'messageField')}
                 required="true"
               />
-              <input type="submit" value="SEND" onClick={this.sendMail}/>
+              <input className="clickable" type="submit" value="SEND" onClick={this.sendMail}/>
             </form>
           </div>
         </div>

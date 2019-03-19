@@ -12,7 +12,7 @@ class NavBar extends Component {
       let currentIndex = i;
       if (this.props.currentIndex === i) {
         items.push(
-          <li key={i}>
+          <li key={i} className="clickable">
             <p style={{color: activeColor, transition: '.1s'}}>
               0{i + 1}
             </p>
@@ -20,7 +20,7 @@ class NavBar extends Component {
         )
       } else {
         items.push(
-          <li key={i}>
+          <li key={i} className="clickable">
             <Link to={'/Content/' + currentIndex} style={{color: inactiveColor}}>
               0{i + 1}
             </Link>
@@ -36,7 +36,7 @@ class NavBar extends Component {
       <div className="nav-bar">
         <ul>
           <li className={this.props.contactThrough ? 'contact-through' : ''}>
-            <Link to="/Contact">contact</Link>
+            <Link to="/Contact" className="clickable">contact</Link>
           </li>
           {this.items()}
         </ul>

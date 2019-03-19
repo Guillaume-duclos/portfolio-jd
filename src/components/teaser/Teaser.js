@@ -43,7 +43,7 @@ class Teaser extends Component {
       <div
         onClick={this.props.redirectedToContent}
         ref='circle'
-        className={`teaser circle ${this.props.animationActive ? 'teaser-illustration-one' : 'teaser-illustration-two'}`}
+        className={`teaser circle clickable ${this.props.animationActive ? 'teaser-illustration-one' : 'teaser-illustration-two'}`}
         style={{backgroundImage: this.props.teaserBackground}}>
         <Circle
           progress={this.props.progress}

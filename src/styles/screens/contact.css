@@ -33,7 +33,7 @@
         top: 200px;
         left: -500px;
         z-index: 2; }
-        @media screen and (max-width: 900px) {
+        @media screen and (max-width: 1000px) {
           .contact-container .contact-illustration-container .contact-text .contactIllustrationOne {
             width: 500px; } }
         @media screen and (max-width: 700px) {
@@ -45,10 +45,10 @@
             width: 300px;
             left: -300px; } }
       .contact-container .contact-illustration-container .contact-text .contactIllustrationTwo {
-        top: 500px;
+        top: 600px;
         left: -10px;
         z-index: 3; }
-        @media screen and (max-width: 900px) {
+        @media screen and (max-width: 1000px) {
           .contact-container .contact-illustration-container .contact-text .contactIllustrationTwo {
             width: 300px; } }
         @media screen and (max-width: 700px) {
@@ -57,11 +57,15 @@
         @media screen and (max-width: 500px) {
           .contact-container .contact-illustration-container .contact-text .contactIllustrationTwo {
             width: 180px; } }
+        @media screen and (max-width: 400px) {
+          .contact-container .contact-illustration-container .contact-text .contactIllustrationTwo {
+            top: 550px;
+            left: 80px; } }
       .contact-container .contact-illustration-container .contact-text .contactIllustrationThree {
         top: 130px;
         left: -530px;
         z-index: 4; }
-        @media screen and (max-width: 900px) {
+        @media screen and (max-width: 1000px) {
           .contact-container .contact-illustration-container .contact-text .contactIllustrationThree {
             width: 300px;
             left: -450px; } }
@@ -73,19 +77,32 @@
           .contact-container .contact-illustration-container .contact-text .contactIllustrationThree {
             width: 200px;
             left: -190px; } }
+        @media screen and (max-width: 400px) {
+          .contact-container .contact-illustration-container .contact-text .contactIllustrationThree {
+            display: none; } }
       .contact-container .contact-illustration-container .contact-text .contactIllustrationFour {
         top: 0;
         left: -350px; }
         @media screen and (max-width: 700px) {
           .contact-container .contact-illustration-container .contact-text .contactIllustrationFour {
             width: 500px; } }
-      @media screen and (max-width: 900px) {
+        @media screen and (max-width: 400px) {
+          .contact-container .contact-illustration-container .contact-text .contactIllustrationFour {
+            width: 100%;
+            left: 0; } }
+      @media screen and (max-width: 1000px) {
         .contact-container .contact-illustration-container .contact-text {
           padding: 250px 20px; } }
+      @media screen and (max-width: 700px) {
+        .contact-container .contact-illustration-container .contact-text {
+          padding: 200px 20px; } }
       @media screen and (max-width: 600px) {
         .contact-container .contact-illustration-container .contact-text {
           padding: 200px 20px;
           width: 65%; } }
+      @media screen and (max-width: 400px) {
+        .contact-container .contact-illustration-container .contact-text {
+          width: 100%; } }
   .contact-container .form-container {
     margin: auto;
     width: 48%;

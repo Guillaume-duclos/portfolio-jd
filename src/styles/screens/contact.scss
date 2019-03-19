@@ -47,7 +47,7 @@
         left: -500px;
         z-index: 2;
 
-        @media screen and (max-width: 900px) {
+        @media screen and (max-width: 1000px) {
           width: 500px;
         }
 
@@ -63,11 +63,11 @@
       }
 
       .contactIllustrationTwo {
-        top: 500px;
+        top: 600px;
         left: -10px;
         z-index: 3;
 
-        @media screen and (max-width: 900px) {
+        @media screen and (max-width: 1000px) {
           width: 300px;
         }
 
@@ -78,6 +78,11 @@
         @media screen and (max-width: 500px) {
           width: 180px;
         }
+
+        @media screen and (max-width: 400px) {
+          top: 550px;
+          left: 80px;
+        }
       }
 
       .contactIllustrationThree {
@@ -85,7 +90,7 @@
         left: -530px;
         z-index: 4;
 
-        @media screen and (max-width: 900px) {
+        @media screen and (max-width: 1000px) {
           width: 300px;
           left: -450px;
         }
@@ -99,6 +104,10 @@
           width: 200px;
           left: -190px;
         }
+
+        @media screen and (max-width: 400px) {
+          display: none;
+        }
       }
 
       .contactIllustrationFour {
@@ -108,15 +117,28 @@
         @media screen and (max-width: 700px) {
           width: 500px;
         }
+
+        @media screen and (max-width: 400px) {
+          width: 100%;
+          left: 0;
+        }
       }
 
-      @media screen and (max-width: 900px) {
+      @media screen and (max-width: 1000px) {
         padding: 250px 20px;
+      }
+
+      @media screen and (max-width: 700px) {
+        padding: 200px 20px;
       }
 
       @media screen and (max-width: 600px) {
         padding: 200px 20px;
         width: 65%;
+      }
+
+      @media screen and (max-width: 400px) {
+        width: 100%;
       }
     }
   }

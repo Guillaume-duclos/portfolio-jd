@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const Logo = () => {
   return (
-    <Tilt className="logo" options={{ max: 25, scale: 1 }}>
+    <Tilt className="logo clickable" options={{ max: 25, scale: 1 }}>
       <Link to="/Home">
         <div>
           <div>

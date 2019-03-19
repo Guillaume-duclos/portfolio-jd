@@ -4,6 +4,8 @@ import Logo from "../logo/Logo";
 import NavBar from "../navbar/NavBar";
 import axios from "axios/index";
 
+const cursor = document.createElement('div');
+
 class Container extends Component {
 
   state = {
@@ -23,7 +25,6 @@ class Container extends Component {
         }
       });
 
-    const cursor = document.createElement('div');
     cursor.setAttribute('id', 'cursor');
     this.refs.cursorArea.append(cursor);
 
@@ -43,19 +44,26 @@ class Container extends Component {
 
     if (this.props.page === "home") {
       document.body.style.overflow = 'hidden';
-      document.querySelector('.teaser').addEventListener('mouseenter', () => {
-        cursor.classList.remove('cursor-no-triggered');
-        cursor.classList.add('cursor-triggered');
-      });
-
-      document.querySelector('.teaser').addEventListener('mouseout', () => {
-        cursor.classList.remove('cursor-triggered');
-        cursor.classList.add('cursor-no-triggered');
-      });
     } else {
       document.body.style.overflow = 'auto';
     }
+
+    const links = document.querySelectorAll('.clickable');
+    for (let i = 0; i < links.length; i++) {
+      links[i].addEventListener('mouseenter', this.cursorTriggered);
+      links[i].addEventListener('mouseout', this.cursorNoTriggered);
+    }
   }
+
+  cursorTriggered = () => {
+    cursor.classList.remove('cursor-no-triggered');
+    cursor.classList.add('cursor-triggered');
+  };
+
+  cursorNoTriggered = () => {
+    cursor.classList.remove('cursor-triggered');
+    cursor.classList.add('cursor-no-triggered');
+  };
 
   componentWillUnmount() {
     document.getElementById('cursor').remove();
