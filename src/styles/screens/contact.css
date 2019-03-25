@@ -106,11 +106,11 @@
   .contact-container .form-container {
     margin: auto;
     width: 48%;
-    z-index: 999;
     animation-name: formAnimation;
     animation-duration: .5s;
     position: relative;
-    transition: .3s; }
+    transition: .3s;
+    z-index: 10; }
     @media all and (max-width: 1200px) {
       .contact-container .form-container {
         width: 70%; } }

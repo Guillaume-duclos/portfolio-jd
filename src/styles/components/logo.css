@@ -3,7 +3,7 @@
   left: 50px;
   top: 20px;
   height: 200px;
-  z-index: 999; }
+  z-index: 10; }
   .logo a > div {
     display: inline-block; }
   .logo a > div:nth-child(1) {

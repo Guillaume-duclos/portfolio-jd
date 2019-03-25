@@ -4,7 +4,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 5;
+  z-index: 10;
   border-radius: 50%; }
   .teaser .teaser-text-container canvas {
     margin: auto;

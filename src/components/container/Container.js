@@ -28,6 +28,10 @@ class Container extends Component {
     cursor.setAttribute('id', 'cursor');
     this.refs.cursorArea.append(cursor);
 
+    document.addEventListener('mouseenter', () => {
+      this.cursorNoTriggered();
+    });
+
     document.addEventListener('mousemove', (event) => {
       cursor.classList.add('cursor-displayed');
       cursor.style.left = `${event.clientX - 15}px`;
@@ -49,8 +53,9 @@ class Container extends Component {
     }
 
     const links = document.querySelectorAll('.clickable');
+    console.log(links);
     for (let i = 0; i < links.length; i++) {
-      links[i].addEventListener('mouseenter', this.cursorTriggered);
+      links[i].addEventListener('mousemove', this.cursorTriggered);
       links[i].addEventListener('mouseout', this.cursorNoTriggered);
     }
   }

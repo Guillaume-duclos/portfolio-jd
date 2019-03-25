@@ -229,11 +229,11 @@ a {
   .contact-container .form-container {
     margin: auto;
     width: 48%;
-    z-index: 999;
     animation-name: formAnimation;
     animation-duration: .5s;
     position: relative;
-    transition: .3s; }
+    transition: .3s;
+    z-index: 10; }
     @media all and (max-width: 1200px) {
       .contact-container .form-container {
         width: 70%; } }
@@ -343,7 +343,7 @@ a {
   left: 50px;
   top: 20px;
   height: 200px;
-  z-index: 999; }
+  z-index: 10; }
   .logo a > div {
     display: inline-block; }
   .logo a > div:nth-child(1) {
@@ -403,7 +403,7 @@ a {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 5;
+  z-index: 10;
   border-radius: 50%; }
   .teaser .teaser-text-container canvas {
     margin: auto;
@@ -443,7 +443,7 @@ a {
   position: fixed;
   left: 50px;
   bottom: 100px;
-  z-index: 999;
+  z-index: 10;
   animation-duration: .75s;
   animation-name: navbarFadeIn; }
 
@@ -592,7 +592,7 @@ a {
 
 footer {
   margin: 50px 0;
-  z-index: 5; }
+  z-index: 10; }
   footer a, footer div {
     border-radius: 50%; }
     footer a:nth-child(1), footer a:nth-child(3), footer div:nth-child(1), footer div:nth-child(3) {
@@ -616,7 +616,7 @@ footer {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 5; }
+  z-index: 7; }
 
 #cursor {
   width: 30px;
