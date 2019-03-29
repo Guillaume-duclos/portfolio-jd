@@ -29,6 +29,7 @@ class Content extends Component {
   componentDidUpdate() {
     if (!this.state.loading) {
       this.refs.desc.innerHTML = this.state.data.project_description;
+      this.refs.video.innerHTML = this.state.data.video;
     }
   }
 
@@ -53,7 +54,7 @@ class Content extends Component {
       .then(response => {
         this.setState({
           data: response.data[this.state.projectIndex].acf,
-          projectIllustration: response.data[this.state.projectIndex].acf.project_content_illustration.url,
+          projectIllustration: response.data[this.state.projectIndex].acf.project_illustration.url,
           projectCategory: response.data[this.state.projectIndex].acf.project_category,
           projectNumber: response.data.length,
           loadingData: false
@@ -88,6 +89,7 @@ class Content extends Component {
   };
 
   render() {
+    console.log(this.state.data);
     if (this.state.loading) {
       return (
         <Loader gif={gifLoadingContent}/>
@@ -106,6 +108,7 @@ class Content extends Component {
             </div>
             <h1 className="project-title text-center upper">{this.state.data.project_title}</h1>
             <div ref="desc" className="project-description"/>
+            <div className="project-video" ref="video"/>
             <div className="project-strats">
               {this.renderStrats()}
             </div>

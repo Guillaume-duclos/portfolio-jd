@@ -4,7 +4,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /*cursor: url('../../assets/cursor.png') 15 15, auto;
+  transition: .5s;*/
   cursor: none;
+}
+
+.clickable:hover {
+  /*transition: .5s;
+  cursor: url('../../assets/cursor-x2.png') 30 30, auto;*/
 }
 
 html, body {

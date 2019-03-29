@@ -4,12 +4,14 @@
   height: auto;
   display: table;
   animation-name: project-header-anim;
-  animation-duration: .5s; }
+  animation-duration: .5s;
+  width: 60%; }
   .project-header img {
     width: 100%; }
   .project-header .teaser-title {
     bottom: 60px;
     right: -40px;
+    height: auto;
     opacity: 0;
     animation-name: teaser-title-anim;
     animation-fill-mode: forwards;
@@ -42,22 +44,32 @@
 .project-description {
   color: white;
   margin: 30px 200px 50px 200px;
-  line-height: 26px; }
+  line-height: 26px;
+  z-index: 10; }
+  .project-description a {
+    text-decoration: underline;
+    color: white; }
   @media screen and (max-width: 600px) {
     .project-description {
       margin: 30px 50px 50px 50px; } }
 
-.project-strats img {
-  display: block;
-  margin: auto;
-  max-width: 100%; }
+.project-video {
+  z-index: 10; }
+  .project-video iframe {
+    margin: auto;
+    display: block;
+    cursor: none; }
 
-.project-strats .strat-full-width {
-  width: 100%; }
-
-.project-strats .animated {
-  margin-top: 100px; }
-
-.project-strats .animated.fadeIn {
-  transition: .7s;
-  margin: 0; }
+.project-strats {
+  z-index: 2; }
+  .project-strats img {
+    display: block;
+    margin: auto;
+    max-width: 100%; }
+  .project-strats .strat-full-width {
+    width: 100%; }
+  .project-strats .animated {
+    margin-top: 100px; }
+  .project-strats .animated.fadeIn {
+    transition: .7s;
+    margin: 0; }

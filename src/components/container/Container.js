@@ -52,8 +52,8 @@ class Container extends Component {
       document.body.style.overflow = 'auto';
     }
 
-    const links = document.querySelectorAll('.clickable');
-    console.log(links);
+    const links = document.querySelectorAll('.clickable, a');
+
     for (let i = 0; i < links.length; i++) {
       links[i].addEventListener('mousemove', this.cursorTriggered);
       links[i].addEventListener('mouseout', this.cursorNoTriggered);
@@ -69,6 +69,19 @@ class Container extends Component {
     cursor.classList.remove('cursor-triggered');
     cursor.classList.add('cursor-no-triggered');
   };
+
+  removeCursor = () => {
+  cursor.classList.remove('cursor-displayed');
+  };
+
+  componentDidUpdate() {
+    const links = document.querySelectorAll('.clickable, a');
+
+    for (let i = 0; i < links.length; i++) {
+      links[i].addEventListener('mousemove', this.cursorTriggered);
+      links[i].addEventListener('mouseout', this.cursorNoTriggered);
+    }
+  }
 
   componentWillUnmount() {
     document.getElementById('cursor').remove();

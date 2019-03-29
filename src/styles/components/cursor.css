@@ -18,6 +18,9 @@
 .cursor-displayed {
   display: block !important; }
 
+iframe:hover #cursor {
+  display: none !important; }
+
 .cursor-triggered {
   animation: cursorBig .2s forwards; }
 
