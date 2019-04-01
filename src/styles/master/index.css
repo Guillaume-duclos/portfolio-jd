@@ -64,16 +64,17 @@ a {
   overflow: hidden; }
 
 .project-header {
-  margin: 0 auto;
   position: relative;
   height: auto;
   display: table;
   animation-name: project-header-anim;
   animation-duration: .5s;
-  width: 60%; }
+  max-width: 700px;
+  margin: -350px auto 0 auto; }
   .project-header img {
     width: 100%; }
   .project-header .teaser-title {
+    top: auto;
     bottom: 60px;
     right: -40px;
     height: auto;
@@ -93,10 +94,10 @@ a {
 
 @keyframes project-header-anim {
   from {
-    margin-top: -400px;
+    margin-top: -100%;
     opacity: 0; }
   to {
-    margin-top: 0;
+    margin-top: -32%;
     opacity: 1; } }
 
 .project-title {
@@ -271,8 +272,8 @@ a {
       padding-bottom: 6px;
       transform: rotate(270deg);
       position: absolute;
-      top: 50px;
-      left: -150px; }
+      top: 130px;
+      left: -235px; }
       .contact-container .form-container p a {
         color: white;
         margin: 8px; }

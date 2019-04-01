@@ -168,8 +168,8 @@ class Contact extends Component {
               </div>
 
               <div className="form-container">
-                <p>Download my CV <a href={this.state.cvEnLink} target="_blank" className="clickable">EN</a> / <a
-                  href={this.state.cvFrLink} target="_blank" className="clickable">FR</a></p>
+                <p><a href="https://www.behance.net/jeanneduplessis" target="_blank" className="clickable">Behance</a><a href="https://www.linkedin.com/in/jeanneduplessis/" target="_blank" className="clickable">Linkedin</a> -&nbsp;&nbsp;&nbsp; Download my CV<a href={this.state.cvEnLink} target="_blank" className="clickable">EN</a> / <a href={this.state.cvFrLink} target="_blank" className="clickable">FR</a>
+                </p>
                 <form>
                   <input
                     ref="emailField"
