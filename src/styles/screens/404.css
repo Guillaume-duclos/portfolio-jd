@@ -1,2 +1,21 @@
-.not-found-circle {
-  background-image: url("../../assets/gifs/gif-404.gif"); }
+.not-found-page {
+  color: #ffffff;
+  text-align: center;
+  z-index: 7; }
+  .not-found-page img {
+    margin-top: 50px; }
+  .not-found-page h1 {
+    font-size: 55px;
+    letter-spacing: 1px;
+    margin-top: 20px;
+    font-family: "BulterStencilBold", Serif; }
+  .not-found-page a {
+    color: #ffffff;
+    margin: 30px auto 0 auto;
+    padding: 15px;
+    border: 2px solid #ffffff;
+    display: inline-block; }
+    .not-found-page a:hover {
+      background-color: #ffffff;
+      color: #000000;
+      font-weight: bold; }

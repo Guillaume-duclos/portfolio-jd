@@ -22,7 +22,8 @@ class Contact extends Component {
     imageIllustrationFour: '',
     loading: true,
     loadingData: true,
-    messageSending: false
+    messageSending: false,
+    messageSent: false
   };
 
   componentDidMount() {
@@ -117,17 +118,35 @@ class Contact extends Component {
         email: this.state.emailValue,
         message: this.state.messageValue
       })
-        .then(response => this.setState({messageSending: false}))
-        .catch(error => console.log('Sending mail error'));
+      .then(response => this.setState({
+        messageSending: false,
+        messageSent: true
+      }))
+      .catch(error => console.log('Sending mail error'));
       this.setState({
-        messageSending: true
+        messageSending: true,
+        messageSent: false
       });
     } else {
       console.log('ERROR');
     }
   };
 
+  renderPopinMessage = () => {
+    if (this.state.messageSent) {
+      setTimeout(function () {
+        return (
+          <div ref="messagePopin" className="popin-message-send">
+            <p>Votre message a bien été envoyé</p>
+          </div>
+        )
+      }, 2000);
+    }
+  };
+
   render() {
+
+    console.log(this.state.messageSent);
 
     let emailClassName = 'inputInactive';
     let textareaClassName = 'inputInactive';
@@ -152,6 +171,9 @@ class Contact extends Component {
       return (
         <div className="contact">
           <Container contactThrough={true}>
+
+            {this.renderPopinMessage()}
+
             <div className="contact-container">
 
               <div className="contact-illustration-container">
@@ -168,7 +190,13 @@ class Contact extends Component {
               </div>
 
               <div className="form-container">
-                <p><a href="https://www.behance.net/jeanneduplessis" target="_blank" className="clickable">Behance</a><a href="https://www.linkedin.com/in/jeanneduplessis/" target="_blank" className="clickable">Linkedin</a> -&nbsp;&nbsp;&nbsp; Download my CV<a href={this.state.cvEnLink} target="_blank" className="clickable">EN</a> / <a href={this.state.cvFrLink} target="_blank" className="clickable">FR</a>
+                <p>
+                  <a href="https://www.behance.net/jeanneduplessis" target="_blank" className="clickable">Behance</a>
+                  <a href="https://www.linkedin.com/in/jeanneduplessis/" target="_blank" className="clickable">Linkedin</a>
+                </p>
+                <p>
+                  <a href={this.state.cvFrLink} target="_blank" className="clickable">CV FR</a>
+                  <a href={this.state.cvEnLink} target="_blank" className="clickable">CV EN</a>
                 </p>
                 <form>
                   <input

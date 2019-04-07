@@ -1,6 +1,25 @@
+.popin-message-send {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  z-index: 12; }
+  .popin-message-send p {
+    background-color: white;
+    padding: 50px;
+    margin: auto;
+    box-shadow: 0 0 10px 2px #656565; }
+
+.popin-message-send-hidden {
+  visibility: hidden; }
+
 .contact-container {
   width: 100%;
-  margin-bottom: 50px; }
+  margin-bottom: 50px;
+  position: relative; }
   .contact-container .contact-illustration-container {
     width: 100%;
     height: 750px;
@@ -126,17 +145,18 @@
     .contact-container .form-container p {
       color: white;
       text-transform: uppercase;
-      border-bottom: 1px solid white;
-      padding-bottom: 6px;
       transform: rotate(270deg);
       position: absolute;
       top: 130px;
-      left: -235px; }
+      left: -120px; }
       .contact-container .form-container p a {
         color: white;
-        margin: 8px; }
-        .contact-container .form-container p a:last-child {
-          margin-right: 0; }
+        border-bottom: 1px solid white;
+        padding-bottom: 6px;
+        margin-bottom: 10px;
+        font-size: 14px; }
+        .contact-container .form-container p a:first-child {
+          margin-right: 10px; }
       @media screen and (max-width: 600px) {
         .contact-container .form-container p {
           left: auto;

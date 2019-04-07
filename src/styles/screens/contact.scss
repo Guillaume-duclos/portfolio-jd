@@ -1,8 +1,31 @@
 @import "../configs/colors.scss";
 
+.popin-message-send {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  z-index: 12;
+
+  p {
+    background-color: $white;
+    padding: 50px;
+    margin: auto;
+    box-shadow: 0 0 10px 2px #656565;
+  }
+}
+
+.popin-message-send-hidden {
+  visibility: hidden;
+}
+
 .contact-container {
   width: 100%;
   margin-bottom: 50px;
+  position: relative;
 
   .contact-illustration-container {
     width: 100%;
@@ -171,19 +194,20 @@
     p {
       color: $white;
       text-transform: uppercase;
-      border-bottom: 1px solid $white;
-      padding-bottom: 6px;
       transform: rotate(270deg);
       position: absolute;
       top: 130px;
-      left: -235px;
+      left: -120px;
 
       a {
         color: $white;
-        margin: 8px;
+        border-bottom: 1px solid $white;
+        padding-bottom: 6px;
+        margin-bottom: 10px;
+        font-size: 14px;
 
-        &:last-child {
-          margin-right: 0;
+        &:first-child {
+          margin-right: 10px;
         }
       }
 
