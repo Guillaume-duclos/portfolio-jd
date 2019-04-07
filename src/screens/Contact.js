@@ -114,7 +114,7 @@ class Contact extends Component {
     if (this.state.emailValue !== '' && this.state.messageValue !== '' && this.refs.emailField.validity.valid !== false && this.refs.messageField.validity.valid !== false) {
       e.preventDefault();
       axios.defaults.headers.post['Content-Type'] = 'application/json';
-      axios.post('https://www.enformed.io/vaihyuml/', {
+      axios.post('https://www.enformed.io/ltv1em6e/', {
         email: this.state.emailValue,
         message: this.state.messageValue
       })
