@@ -218,7 +218,7 @@ class Contact extends Component {
                     onChange={(e) => this.getFieldValue(e, 'messageField')}
                     required="true"
                   />
-                  <input className="clickable" type="submit" value="SEND" onClick={this.sendMail}/>
+                  <input className="clickable btn-send" type="submit" value="SEND" onClick={this.sendMail}/>
                 </form>
               </div>
             </div>

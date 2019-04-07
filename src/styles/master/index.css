@@ -334,7 +334,7 @@ a {
       color: #171717;
       background-color: white; }
     .contact-container .form-container form input:first-child, .contact-container .form-container form input:last-child {
-      border: 2px solid white !important; }
+      border: 2px solid white; }
     .contact-container .form-container form textarea {
       border-left: 2px solid white;
       border-right: 2px solid white;
@@ -348,6 +348,8 @@ a {
       background-color: white;
       color: #171717;
       font-weight: bold; }
+    .contact-container .form-container form .btn-send {
+      border: 2px solid #ffffff !important; }
 
 @keyframes formAnimation {
   from {

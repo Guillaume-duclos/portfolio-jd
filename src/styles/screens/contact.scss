@@ -267,7 +267,7 @@
       }
 
       input:first-child, input:last-child {
-        border: 2px solid $white!important;
+        border: 2px solid $white;
       }
 
       textarea {
@@ -287,6 +287,10 @@
         background-color: $white;
         color: $background;
         font-weight: bold;
+      }
+
+      .btn-send {
+        border: 2px solid #ffffff!important;
       }
     }
   }
