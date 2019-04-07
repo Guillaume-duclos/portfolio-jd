@@ -191,33 +191,40 @@
       width: 75%;
     }
 
-    p {
-      color: $white;
-      text-transform: uppercase;
-      transform: rotate(270deg);
+    .contact-link-rs-1 {
       position: absolute;
       top: 130px;
-      left: -120px;
+      left: -130px;
+      transform: rotate(270deg);
 
-      a {
+      p {
         color: $white;
-        border-bottom: 1px solid $white;
-        padding-bottom: 6px;
-        margin-bottom: 10px;
-        font-size: 14px;
+        text-transform: uppercase;
 
-        &:first-child {
-          margin-right: 10px;
+        &:nth-child(2) {
+          margin-top: 15px;
         }
-      }
 
-      @media screen and (max-width: 600px) {
-        left: auto;
-        right: -140px;
-      }
+        a {
+          color: $white;
+          border-bottom: 1px solid $white;
+          padding-bottom: 6px;
+          margin-bottom: 10px;
+          font-size: 14px;
 
-      @media screen and (max-width: 350px) {
-        right: -130px;
+          &:first-child {
+            margin-right: 10px;
+          }
+        }
+
+        @media screen and (max-width: 600px) {
+          left: auto;
+          right: -140px;
+        }
+
+        @media screen and (max-width: 350px) {
+          right: -130px;
+        }
       }
     }
 
@@ -260,7 +267,7 @@
       }
 
       input:first-child, input:last-child {
-        border: 2px solid $white;
+        border: 2px solid $white!important;
       }
 
       textarea {

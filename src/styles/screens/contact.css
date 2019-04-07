@@ -142,28 +142,31 @@
     @media all and (max-width: 600px) {
       .contact-container .form-container {
         width: 75%; } }
-    .contact-container .form-container p {
-      color: white;
-      text-transform: uppercase;
-      transform: rotate(270deg);
+    .contact-container .form-container .contact-link-rs-1 {
       position: absolute;
       top: 130px;
-      left: -120px; }
-      .contact-container .form-container p a {
+      left: -130px;
+      transform: rotate(270deg); }
+      .contact-container .form-container .contact-link-rs-1 p {
         color: white;
-        border-bottom: 1px solid white;
-        padding-bottom: 6px;
-        margin-bottom: 10px;
-        font-size: 14px; }
-        .contact-container .form-container p a:first-child {
-          margin-right: 10px; }
-      @media screen and (max-width: 600px) {
-        .contact-container .form-container p {
-          left: auto;
-          right: -140px; } }
-      @media screen and (max-width: 350px) {
-        .contact-container .form-container p {
-          right: -130px; } }
+        text-transform: uppercase; }
+        .contact-container .form-container .contact-link-rs-1 p:nth-child(2) {
+          margin-top: 15px; }
+        .contact-container .form-container .contact-link-rs-1 p a {
+          color: white;
+          border-bottom: 1px solid white;
+          padding-bottom: 6px;
+          margin-bottom: 10px;
+          font-size: 14px; }
+          .contact-container .form-container .contact-link-rs-1 p a:first-child {
+            margin-right: 10px; }
+        @media screen and (max-width: 600px) {
+          .contact-container .form-container .contact-link-rs-1 p {
+            left: auto;
+            right: -140px; } }
+        @media screen and (max-width: 350px) {
+          .contact-container .form-container .contact-link-rs-1 p {
+            right: -130px; } }
     .contact-container .form-container form input, .contact-container .form-container form textarea {
       display: block;
       background-color: transparent;
@@ -189,7 +192,7 @@
       color: #171717;
       background-color: white; }
     .contact-container .form-container form input:first-child, .contact-container .form-container form input:last-child {
-      border: 2px solid white; }
+      border: 2px solid white !important; }
     .contact-container .form-container form textarea {
       border-left: 2px solid white;
       border-right: 2px solid white;

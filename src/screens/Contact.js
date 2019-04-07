@@ -190,14 +190,16 @@ class Contact extends Component {
               </div>
 
               <div className="form-container">
-                <p>
-                  <a href="https://www.behance.net/jeanneduplessis" target="_blank" className="clickable">Behance</a>
-                  <a href="https://www.linkedin.com/in/jeanneduplessis/" target="_blank" className="clickable">Linkedin</a>
-                </p>
-                <p>
-                  <a href={this.state.cvFrLink} target="_blank" className="clickable">CV FR</a>
-                  <a href={this.state.cvEnLink} target="_blank" className="clickable">CV EN</a>
-                </p>
+                <div className="contact-link-rs-1">
+                  <p>
+                    <a href="https://www.behance.net/jeanneduplessis" target="_blank" className="clickable">Behance</a>
+                    <a href="https://www.linkedin.com/in/jeanneduplessis/" target="_blank" className="clickable">Linkedin</a>
+                  </p>
+                  <p>
+                    <a href={this.state.cvFrLink} target="_blank" className="clickable">CV FR</a>
+                    <a href={this.state.cvEnLink} target="_blank" className="clickable">CV EN</a>
+                  </p>
+                </div>
                 <form>
                   <input
                     ref="emailField"
