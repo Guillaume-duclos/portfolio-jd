@@ -2,6 +2,10 @@
 
 .teaser {
 
+  * {
+    user-select: none;
+  }
+
   .teaser-text-container {
     width: 100%;
     height: 100%;
