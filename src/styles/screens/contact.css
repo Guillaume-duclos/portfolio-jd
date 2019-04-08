@@ -174,7 +174,8 @@
       border-radius: 0;
       color: white;
       outline: none;
-      box-shadow: none; }
+      box-shadow: none;
+      font-family: 'Arial', serif; }
     .contact-container .form-container form input:first-child, .contact-container .form-container form textarea {
       width: 100%;
       padding: 25px 20px;
