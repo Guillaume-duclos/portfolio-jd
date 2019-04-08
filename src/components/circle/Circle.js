@@ -8,7 +8,7 @@ class Circle extends Component {
     super(props);
     this.state = {
       loadingAnimationDuration: 3,
-      teaserAnimationDuration: 8,
+      teaserAnimationDuration: 10,
       updateProgress: 0,
       previousProgress: 0
     }
