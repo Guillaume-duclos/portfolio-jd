@@ -226,6 +226,14 @@
           right: -130px;
         }
       }
+
+      @media screen and (max-width: 400px) {
+        top: 0;
+        left: 0;
+        margin-bottom: 30px;
+        position: relative;
+        transform: rotate(0deg);
+      }
     }
 
     form {

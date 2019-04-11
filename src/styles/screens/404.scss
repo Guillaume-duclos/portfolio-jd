@@ -2,9 +2,12 @@
   color: #ffffff;
   text-align: center;
   z-index: 7;
+  padding: 0 50px;
 
   img {
-    margin-top: 50px;
+    display: block;
+    margin: 50px auto auto auto;
+    max-width: 100%;
   }
 
   h1 {

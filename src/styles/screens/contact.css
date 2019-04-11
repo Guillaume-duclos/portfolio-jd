@@ -167,6 +167,13 @@
         @media screen and (max-width: 350px) {
           .contact-container .form-container .contact-link-rs-1 p {
             right: -130px; } }
+      @media screen and (max-width: 400px) {
+        .contact-container .form-container .contact-link-rs-1 {
+          top: 0;
+          left: 0;
+          margin-bottom: 30px;
+          position: relative;
+          transform: rotate(0deg); } }
     .contact-container .form-container form input, .contact-container .form-container form textarea {
       display: block;
       background-color: transparent;
