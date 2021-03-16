@@ -145,9 +145,6 @@ class Contact extends Component {
   };
 
   render() {
-
-    console.log(this.state.messageSent);
-
     let emailClassName = 'inputInactive';
     let textareaClassName = 'inputInactive';
 
@@ -194,6 +191,7 @@ class Contact extends Component {
                   <p>
                     <a href="https://www.behance.net/jeanneduplessis" target="_blank" className="clickable">Behance</a>
                     <a href="https://www.linkedin.com/in/jeanneduplessis/" target="_blank" className="clickable">Linkedin</a>
+                    <a href="https://www.instagram.com/jeanne_dpls/" target="_blank" className="clickable">Instagram</a>
                   </p>
                   <p>
                     <a href={this.state.cvFrLink} target="_blank" className="clickable">CV FR</a>

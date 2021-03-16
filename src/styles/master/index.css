@@ -287,7 +287,7 @@ a {
     .contact-container .form-container .contact-link-rs-1 {
       position: absolute;
       top: 130px;
-      left: -130px;
+      left: -165px;
       transform: rotate(270deg); }
       .contact-container .form-container .contact-link-rs-1 p {
         color: white;
@@ -300,7 +300,7 @@ a {
           padding-bottom: 6px;
           margin-bottom: 10px;
           font-size: 14px; }
-          .contact-container .form-container .contact-link-rs-1 p a:first-child {
+          .contact-container .form-container .contact-link-rs-1 p a:first-child, .contact-container .form-container .contact-link-rs-1 p a:nth-child(2) {
             margin-right: 10px; }
         @media screen and (max-width: 600px) {
           .contact-container .form-container .contact-link-rs-1 p {

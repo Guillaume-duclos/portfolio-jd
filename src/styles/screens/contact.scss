@@ -194,7 +194,7 @@
     .contact-link-rs-1 {
       position: absolute;
       top: 130px;
-      left: -130px;
+      left: -165px;
       transform: rotate(270deg);
 
       p {
@@ -212,7 +212,7 @@
           margin-bottom: 10px;
           font-size: 14px;
 
-          &:first-child {
+          &:first-child, &:nth-child(2) {
             margin-right: 10px;
           }
         }
