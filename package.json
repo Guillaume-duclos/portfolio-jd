@@ -5,7 +5,7 @@
   "homepage": "./",
   "dependencies": {
     "axios": "^0.18.0",
-    "gsap": "^2.0.1",
+    "gsap": "^3.6.0",
     "node-sass-chokidar": "^1.5.0",
     "npm": "^6.3.0",
     "npm-run-all": "^4.1.3",
